@@ -1,0 +1,17 @@
+.highlight {
+  animation-name: highlight;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  background-color: yellow;
+}
+
+@keyframes highlight {
+  from {
+    background-color: yellow;
+  }
+
+  to {
+    background-color: transparent;
+  }
+}

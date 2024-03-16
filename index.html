@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
 
@@ -48,7 +47,23 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             margin: 0;
             border: 1px solid #ccc;
         }
+  .highlight {
+  animation-name: highlight;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  background-color: yellow;
+}
 
+@keyframes highlight {
+  from {
+    background-color: yellow;
+  }
+
+  to {
+    background-color: transparent;
+  }
+}	
   </style>
 
   <link rel="icon" type="image/png" href="images/icons.png">
@@ -146,7 +161,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="w3-container w3-light-grey w3-padding-32" id="news">
    <h2>News</h2>  
    <ul>
-	  <li> 03/2024, <blink>Confirmed: PhD in AI/ML from University of Wollongong, Australia.</blink></li>
+	  <li class="highlight"> 03/2024, Confirmed: PhD in AI/ML from University of Wollongong, Australia.</li>
 	  <li> 02/2024, Instructing COMP3210/6210 at MQ, COMP5046 at USyd, and ISIT910, CSIT970, CSIT114 and CSIT115 at UOW, this Autumn Semester.</li>
 	  <li> 01/2024, PhD thesis has been approved by the thesis committe with minor revisions.</li>
 	  <li> 12/2023, Tutoring COMP1300 at Macquarie University College, Sydney this Term 6.</li>
