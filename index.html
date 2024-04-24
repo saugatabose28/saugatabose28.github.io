@@ -33,23 +33,18 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <link rel="stylesheet" href="w3.css">
   
  <style>
-    /* Additional styles for the chitchat box */
-    #chitchatBox {
-      position: absolute;
-      right: 20px;
+/* Styles for the right sidebar */
+    #chitchatSidebar {
+      position: fixed;
+      top: 0;
+      right: 0;
       width: 300px;
-      max-width: 25%;
-      background-color: #f1f1f1;
+      height: 100vh;
+      background-color: #f8f8f8;
       padding: 20px;
-      border-radius: 5px;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-      z-index: 1;
-    }
-
-    /* Positioning the chitchat box beside the "News" section */
-    #w3-main {
-      position: relative;
-      padding-right: 340px; /* Adjust this value based on the width of the chitchat box */
+      z-index: 3;
+      overflow-y: auto;
     }
   </style>
 
@@ -146,6 +141,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   </div>
 </nav>
+ <!-- New Sidebar for Chitchat -->
+  <nav id="chitchatSidebar">
+    <div class="w3-container w3-display-container w3-padding-16">
+      <h3><b>Chitchat</b></h3>
+    </div>
+    <div class="w3-padding-16 w3-text-grey w3-large">
+      <p>Here you can display any chitchat information.</p>
+    </div>
+  </nav>
 
 <!-- New Sidebar for Chitchat 
   <nav class="w3-sidebar w3-bar-block w3-blue-grey w3-collapse w3-right" style="z-index:3;width:300px;right:0" id="mySidebar1">
@@ -167,10 +171,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- Overlay effect when opening sidebar on small screens -->
 <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
 
-<!-- !PAGE CONTENT! 
 <div class="w3-main" style="margin-left:150px;margin-right:300px" role="main">
--->
-<div class="w3-main" style="margin-left:150px" role="main">
+<!-- !PAGE CONTENT! 
+
+<div class="w3-main" style="margin-left:150px" role="main"> -->
   <!-- Push down content on small screens -->
   <div class="w3-hide-large" style="margin-top:83px"></div>
 
@@ -506,13 +510,13 @@ document.getElementById("myBtn").click();
 // Open and close sidebar
 function w3_open() {
   document.getElementById("mySidebar").style.display = "block";
-  document.getElementById("mySidebar1").style.display = "block";
+  document.getElementById("chitchatSidebar ").style.display = "block";
   document.getElementById("myOverlay").style.display = "block";
 }
  
 function w3_close() {
   document.getElementById("mySidebar").style.display = "none";
-  document.getElementById("mySidebar1").style.display = "none";
+  document.getElementById("chitchatSidebar").style.display = "none";
   document.getElementById("myOverlay").style.display = "none";
 }
 </script>
