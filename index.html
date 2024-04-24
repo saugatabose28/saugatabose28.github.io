@@ -31,6 +31,23 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <meta name="author" content="Saugata Bose" />
 
   <link rel="stylesheet" href="w3.css">
+  
+   <style>
+    /* Additional styles for the chitchat box */
+    #chitchatBox {
+      position: fixed;
+      top: 50%;
+      right: 20px;
+      transform: translateY(-50%);
+      width: 300px;
+      height: 200px;
+      background-color: #f1f1f1;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      z-index: 4;
+    }
+  </style>
 
   <style>
   .w3-sidebar a {font-family: "Roboto", sans-serif}
@@ -125,7 +142,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   </div>
 </nav>
-<!-- New Sidebar for Chitchat -->
+<!-- Chitchat Box -->
+  <div id="chitchatBox">
+    <h3>Chitchat</h3>
+    <p>Here you can display any chitchat information.</p>
+  </div>
+<!-- New Sidebar for Chitchat 
   <nav class="w3-sidebar w3-bar-block w3-blue-grey w3-collapse w3-right" style="z-index:3;width:300px;right:0" id="mySidebar1">
     <div class="w3-container w3-display-container w3-padding-16">
       <h3><b>Chitchat</b></h3>
@@ -134,6 +156,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <p>Here you can display any chitchat information.</p>
     </div>
   </nav>
+ -->
 <!-- Top menu on small screens -->
 <header class="w3-bar w3-top w3-hide-large w3-blue-grey w3-xlarge" role="banner">
   <div class="w3-bar-item w3-padding-24">Saugata Bose</div>
@@ -144,9 +167,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- Overlay effect when opening sidebar on small screens -->
 <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
 
-<!-- !PAGE CONTENT! -->
+<!-- !PAGE CONTENT! 
 <div class="w3-main" style="margin-left:150px;margin-right:300px" role="main">
-
+-->
+<div class="w3-main" style="margin-left:150px" role="main">
   <!-- Push down content on small screens -->
   <div class="w3-hide-large" style="margin-top:83px"></div>
 
