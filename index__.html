@@ -35,11 +35,29 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <style>
     /* Styles for the right sidebar */
     #expertiseSidebar {
-      background-color: #f2f2f2;
+      position: fixed;
+      top: 0;
+      right: 20px;
+      width: 280px;
+      height: 100vh;
+      background-color: transparent;
       padding: 20px;
-      border-radius: 5px;
+      
+      z-index: 3;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: left;
+      text-align: left;
       font-family: Arial, sans-serif;
     }
+	
+	#expertiseSidebar .content{
+	  background-color: transparent;
+      padding: 20px;
+	  border-radius: 5px
+	}
 
     #expertiseSidebar h3 {
       text-align: center;
@@ -61,17 +79,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     #expertiseSidebar li strong {
       font-weight: bold;
       color: #333;
-    }
-
-    /* Responsive styles */
-    @media (max-width: 767px) {
-      #expertiseSidebar {
-        position: static;
-        width: 100%;
-        margin-top: 20px;
-        padding: 10px;
-        border-radius: 0;
-      }
     }
   </style>
 
@@ -142,9 +149,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </head>
 
 <body class="w3-content" style="max-width:1000px">
-
-
-  
 <amp-auto-ads type="adsense"
         data-ad-client="ca-pub-8335360976249671">
 </amp-auto-ads>
@@ -171,22 +175,26 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   </div>
 </nav>
-
-<!-- Sidebar for Technical Expertise -->
+  <!-- Sidebar for Technical Expertise -->
   <nav id="expertiseSidebar">
-    <div class="w3-container w3-display-container w3-padding-16">
-      <h3>Technical Expertise</h3>
-    </div>
-    <div class="w3-padding-16 w3-text-grey">
-      <ul>
-        <li><strong>Machine Learning & Natural Language Processing:</strong> Data Analysis, Pattern Recognition, Classical Models (SVM, Decision Tree, Ensemble Methods), Deep Learning models (BERT, GPT), Model Optimization</li>
-        <li><strong>Programming Languages:</strong> Python, MATLAB, SQL, Java, C, Bash</li>
-        <li><strong>Python Frameworks:</strong> PyTorch, Scikit-Learn, Pandas, NumPy, NLTK, TensorFlow, Keras</li>
-        <li><strong>Java Frameworks:</strong> Spring, Maven, Kafka</li>
-        <li><strong>Databases:</strong> Oracle, MySQL, MongoDB</li>
-      </ul>
-    </div>
-  </nav>  
+	<div class="content">
+		<div class="w3-container w3-display-container w3-padding-16">
+		  <h3>Technical Expertise</h3>
+		</div>
+		<div class="w3-padding-16 w3-text-grey">
+		  <ul>
+			<li><strong>Machine Learning & Natural Language Processing:</strong> Data Analysis, Pattern Recognition, Classical Models (SVM, Decision Tree, Ensemble Methods), Deep Learning models (BERT, GPT), Model Optimization</li>
+			<li><strong>Programming Languages:</strong> Python, MATLAB, SQL, Java, C, Bash</li>
+			<li><strong>Python Frameworks:</strong> PyTorch, Scikit-Learn, Pandas, NumPy, NLTK, TensorFlow, Keras</li>
+			<li><strong>Java Frameworks:</strong> Spring, Maven, Kafka</li>
+			<li><strong>Databases:</strong> Oracle, MySQL, MongoDB</li>
+		  </ul>
+		</div>
+	</div>
+  </nav>
+
+
+
 
 <!-- New Sidebar for Chitchat 
   <nav class="w3-sidebar w3-bar-block w3-blue-grey w3-collapse w3-right" style="z-index:3;width:300px;right:0" id="mySidebar1">
