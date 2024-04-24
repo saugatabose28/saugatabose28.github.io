@@ -32,21 +32,24 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
   <link rel="stylesheet" href="w3.css">
   
-   <style>
+ <style>
     /* Additional styles for the chitchat box */
     #chitchatBox {
       position: absolute;
-      top: 50vh; /* Use viewport height units */
       right: 20px;
-      transform: translateY(-50%);
       width: 300px;
-      max-height: 50vh; /* Limit the maximum height */
+      max-width: 30%;
       background-color: #f1f1f1;
       padding: 20px;
       border-radius: 5px;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-      z-index: 4;
-      overflow-y: auto; /* Add scrollbar if content exceeds the box height */
+      z-index: 1;
+    }
+
+    /* Positioning the chitchat box beside the "News" section */
+    #news {
+      position: relative;
+      padding-right: 320px; /* Adjust this value based on the width of the chitchat box */
     }
   </style>
 
@@ -143,11 +146,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   </div>
 </nav>
-<!-- Chitchat Box -->
-  <div id="chitchatBox">
-    <h3>Chitchat</h3>
-    <p>Here you can display any chitchat information.</p>
-  </div>
+
 <!-- New Sidebar for Chitchat 
   <nav class="w3-sidebar w3-bar-block w3-blue-grey w3-collapse w3-right" style="z-index:3;width:300px;right:0" id="mySidebar1">
     <div class="w3-container w3-display-container w3-padding-16">
@@ -206,6 +205,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <li> 04/2022, 1 paper has been accepted by <a href="https://lrec2022.lrec-conf.org/en/">LREC 2022</a>.</li>
 	  <li> 02/2022, 1 poster has been presented at <a href="https://acsw.core.edu.au/2022-home">ACSW 2022</a>.</li></p>   
 	</ul>
+  </div>
+  <!-- Chitchat Box -->
+  <div id="chitchatBox">
+    <h3>Chitchat</h3>
+    <p>Here you can display any chitchat information.</p>
   </div>
 
 <!-- The News Section -->
