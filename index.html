@@ -40,9 +40,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       right: 20px;
       width: 280px;
       height: 100vh;
-      background-color: #f2f2f2;
+      background-color: transparent;
       padding: 20px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      
       z-index: 3;
       overflow-y: auto;
       display: flex;
@@ -52,6 +52,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       text-align: left;
       font-family: Arial, sans-serif;
     }
+	
+	#expertiseSidebar .content{
+	  background-color: #f2f2f2;
+      padding: 20px;
+	  border-radius: 5px
+	}
 
     #expertiseSidebar h3 {
       text-align: center;
@@ -171,18 +177,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </nav>
   <!-- Sidebar for Technical Expertise -->
   <nav id="expertiseSidebar">
-    <div class="w3-container w3-display-container w3-padding-16">
-      <h3>Technical Expertise</h3>
-    </div>
-    <div class="w3-padding-16 w3-text-grey">
-      <ul>
-        <li><strong>Machine Learning & Natural Language Processing:</strong> Data Analysis, Pattern Recognition, Classical Models (SVM, Decision Tree, Ensemble Methods), Deep Learning models (BERT, GPT), Model Optimization</li>
-        <li><strong>Programming Languages:</strong> Python, MATLAB, SQL, Java, C, Bash</li>
-        <li><strong>Python Frameworks:</strong> PyTorch, Scikit-Learn, Pandas, NumPy, NLTK, TensorFlow, Keras</li>
-        <li><strong>Java Frameworks:</strong> Spring, Maven, Kafka</li>
-        <li><strong>Databases:</strong> Oracle, MySQL, MongoDB</li>
-      </ul>
-    </div>
+	<div class="content">
+		<div class="w3-container w3-display-container w3-padding-16">
+		  <h3>Technical Expertise</h3>
+		</div>
+		<div class="w3-padding-16 w3-text-grey">
+		  <ul>
+			<li><strong>Machine Learning & Natural Language Processing:</strong> Data Analysis, Pattern Recognition, Classical Models (SVM, Decision Tree, Ensemble Methods), Deep Learning models (BERT, GPT), Model Optimization</li>
+			<li><strong>Programming Languages:</strong> Python, MATLAB, SQL, Java, C, Bash</li>
+			<li><strong>Python Frameworks:</strong> PyTorch, Scikit-Learn, Pandas, NumPy, NLTK, TensorFlow, Keras</li>
+			<li><strong>Java Frameworks:</strong> Spring, Maven, Kafka</li>
+			<li><strong>Databases:</strong> Oracle, MySQL, MongoDB</li>
+		  </ul>
+		</div>
+	</div>
   </nav>
 
 
