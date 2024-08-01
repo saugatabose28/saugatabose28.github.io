@@ -339,9 +339,38 @@ Currently, I'm seeking opportunities to apply my expertise in machine learning a
 		overflow-y: auto;
 		max-height: 100%;
 	}
+	
+	@media screen and (max-width: 767px) {
+    .w3-row {
+        flex-direction: column;
+        overflow-x: visible;
+    }
+
+    .section-box {
+        width: 100%;
+        height: auto;
+        margin: 10px 0;
+    }
+
+    .expertise-box {
+        border-radius: 0;
+        width: 100%;
+        height: auto;
+    }
+
+    .education-box {
+        width: 100%;
+    }
+
+    .education-content {
+        width: 100%;
+    }
+}
 
 	
 </style>
+
+
  <!-- The News Section -->
 <div class="w3-row" style="display: flex; flex-wrap: nowrap; justify-content: space-between; gap: 10px;">
     <div class="w3-container w3-third section-box" id="news">
