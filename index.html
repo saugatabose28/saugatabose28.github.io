@@ -225,53 +225,147 @@ Currently, I'm seeking opportunities to apply my expertise in machine learning a
         </p>
         </tbody></table> 
   </div>
-    <!-- The News Section -->
-<div class="w3-row" style="display: flex; flex-wrap: wrap; justify-content: space-between;">
-  <div class="w3-container w3-light-grey w3-padding-16 w3-third" id="news">
-    <h2>News</h2>
-	<ul>
-	  <li> 08/2024, Conducting tutorial sessions for UTS: 31282 at UTS starting this semester.</li>
-	  <li> 07/2024, Instructing COMP2100 and COMP8320 at MQ and CSIT115 at UOW.</li>
-	  <li> 06/2024, Operating INFO1110 bootcamp at Usyd.</li>
-      <li> 04/2024, Accepted to ECAI-2024 PC.</li>  
-      <li class="highlight"> 03/2024, Confirmed: PhD in AI/ML from University of Wollongong, Australia.</li>
-      <li> 02/2024, Instructing COMP3210/6210 at MQ, COMP5046 at USyd, and ISIT910, CSIT970, CSIT114 and CSIT115 at UOW, this Autumn Semester.</li>
-      <li> 01/2024, PhD thesis has been approved by the thesis committe with minor revisions.</li>
-      <li> 12/2023, Tutoring COMP1300 at Macquarie University College, Sydney this Term 6.</li>
-      <li> 09/2023, 1 paper has been accepted by <a href="https://pkawwebsite.github.io/2023/">PKAW 2023</a>.</li>
-      <li> 07/2023, 1 paper has been accepted by <a href="https://www.escience-conference.org/2023/">eScience 2023</a>.</li>
-      <li> 07/2023, Tutoring COMP2100 at Macquarie University, Sydney this S2.</li>
-      <li> 06/2023, 1 paper has been accepted by <a href="https://adma2023.uqcloud.net/">ADMA 2023</a>. </li>
-      <li> 04/2022, 1 paper has been accepted by <a href="https://lrec2022.lrec-conf.org/en/">LREC 2022</a>.</li>
-      <li> 02/2022, 1 poster has been presented at <a href="https://acsw.core.edu.au/2022-home">ACSW 2022</a>.</li>
-    </ul>
-  </div>
+  
+  
+  .w3-row {
+    max-width: 100%;
+    overflow-x: auto;
+}
 
-  <div class="w3-container w3-third" style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
-    <div style="text-align: center; border: 1px solid black; background: #f5f5f5; padding: 2px;">
-      <h4>Education</h4>
-	  <div class="w3-padding-8 w3-text-grey" style="font-size: 14px;">
-		<p style="margin: 0;">Doctor of Philosophy, 2024<br>University of Wollongong, Australia</p>
-		<p style="margin: 0;">Master of Science (Computer Science), 2014<br>Savitribai Phule Pune University, India</p>
-	  </div>
-	</div>
-  </div>
+.section-box {
+    background-color: #f5f5f5;
+    border: 1px solid #e0e0e0;
+    padding: 15px;
+    margin: 5px;
+    height: 400px;
+    overflow-y: auto;
+}
 
-  <div class="w3-container w3-third" style="display: flex; justify-content: center; align-items: center;">
-    <div style="border-radius: 60%; background: #f5f5f5; padding: 2px; width: 300px; height: 300px; display: flex; align-items: center; justify-content: center;">
-      <div style="text-align: center;">
-        <h5>Technical Expertise</h5>
-        <div class="w3-padding-8 w3-text-grey" style="font-size: 12px;">
-				<strong>Machine Learning & Natural Language Processing:</strong> Data Analysis, Pattern Recognition, Classical Models (SVM, Decision Tree, Ensemble Methods), Deep Learning models (BERT, GPT), Model Optimization</li>
-                <strong>Programming Languages:</strong> Python, MATLAB, SQL, Java, C, Bash</li>
-                <strong>Python Frameworks:</strong> PyTorch, Scikit-Learn, Pandas, NumPy, NLTK, TensorFlow, Keras</li>
-                <strong>Java Frameworks:</strong> Spring, Maven, Kafka</li>
-                <strong>Databases:</strong> Oracle, MySQL, MongoDB</li>
-          </div>
-      </div>
+.section-box h2 {
+    color: #333;
+    border-bottom: 2px solid #4a90e2;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+.news-list {
+    padding-left: 20px;
+    font-size: 14px;
+}
+
+.news-list li {
+    margin-bottom: 8px;
+}
+
+.highlight {
+    font-weight: bold;
+    color: #4a90e2;
+}
+
+.education-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.education-content {
+    width: 100%;
+}
+
+.education-item {
+    margin-bottom: 15px;
+}
+
+.education-item h4 {
+    margin-bottom: 5px;
+    color: #4a90e2;
+}
+
+.education-item p {
+    margin: 0;
+    font-style: italic;
+}
+
+.expertise-box {
+    border-radius: 50%;
+    width: 300px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.expertise-content {
+    font-size: 12px;
+    overflow-y: auto;
+    max-height: 100%;
+}
+
+.expertise-content h4 {
+    color: #4a90e2;
+    margin-top: 10px;
+    margin-bottom: 2px;
+}
+
+.expertise-content p {
+    margin: 0 0 5px 0;
+}
+  
+ <!-- The News Section -->
+<div class="w3-row" style="display: flex; flex-wrap: nowrap; justify-content: space-between; gap: 10px;">
+    <div class="w3-container w3-third section-box" id="news">
+        <h2>News</h2>
+        <ul class="news-list">
+            <li>08/2024, Conducting tutorial sessions for UTS: 31282 at UTS starting this semester.</li>
+            <li>07/2024, Instructing COMP2100 and COMP8320 at MQ and CSIT115 at UOW.</li>
+            <li>06/2024, Operating INFO1110 bootcamp at Usyd.</li>
+            <li>04/2024, Accepted to ECAI-2024 PC.</li>
+            <li class="highlight">03/2024, Confirmed: PhD in AI/ML from University of Wollongong, Australia.</li>
+            <!-- ... other news items ... -->
+        </ul>
     </div>
-  </div>
+
+    <div class="w3-container w3-third section-box education-box">
+        <h2>Education</h2>
+        <div class="education-content">
+            <div class="education-item">
+                <h4>Doctor of Philosophy, 2024</h4>
+                <p>University of Wollongong, Australia</p>
+            </div>
+            <div class="education-item">
+                <h4>Master of Science (Computer Science), 2014</h4>
+                <p>Savitribai Phule Pune University, India</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="w3-container w3-third section-box expertise-box">
+        <h2>Technical Expertise</h2>
+        <div class="expertise-content">
+            <h4>Machine Learning & NLP:</h4>
+            <p>Data Analysis, Pattern Recognition, Classical Models, Deep Learning models, Model Optimization</p>
+            
+            <h4>Programming Languages:</h4>
+            <p>Python, MATLAB, SQL, Java, C, Bash</p>
+            
+            <h4>Python Frameworks:</h4>
+            <p>PyTorch, Scikit-Learn, Pandas, NumPy, NLTK, TensorFlow, Keras</p>
+            
+            <h4>Java Frameworks:</h4>
+            <p>Spring, Maven, Kafka</p>
+            
+            <h4>Databases:</h4>
+            <p>Oracle, MySQL, MongoDB</p>
+        </div>
+    </div>
 </div>
+
+
 
 
 
