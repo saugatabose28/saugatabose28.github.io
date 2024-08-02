@@ -167,16 +167,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <h3><b>Saugata Bose, PhD</b></h3>
   </div>
   <div class="w3-padding-64 w3-text-light-grey w3-large" style="font-weight:bold">
-    <a href="#home" class="w3-bar-item w3-button">Home</a>
-    <!--<a href="#news" class="w3-bar-item w3-button">News</a>-->
-	<a href="#project" class="w3-bar-item w3-button">Portfolio</a>
-    <!-- <a href="#projects" class="w3-bar-item w3-button">Projects</a>
-    <a href="#talks" class="w3-bar-item w3-button">Talks</a> -->
-    <a href="#publications" class="w3-bar-item w3-button">Publications</a>
-    <!-- <a href="#service" class="w3-bar-item w3-button">Services</a> -->
-    <a href="#award" class="w3-bar-item w3-button">Awards</a>
-	<a href="#experience" class="w3-bar-item w3-button">Experiences</a>
-
+    <a href="#home" class="w3-bar-item w3-button" onclick="w3_close()">Home</a>
+    <a href="#project" class="w3-bar-item w3-button" onclick="w3_close()">Portfolio</a>
+    <a href="#publications" class="w3-bar-item w3-button" onclick="w3_close()">Publications</a>
+    <a href="#award" class="w3-bar-item w3-button" onclick="w3_close()">Awards</a>
+    <a href="#experience" class="w3-bar-item w3-button" onclick="w3_close()">Experiences</a>
   </div>
 </nav>
  
@@ -744,6 +739,14 @@ document.addEventListener('click', function (event) {
     w3_close();
   }
 });
+
+// Close sidebar when clicking a menu item
+document.querySelectorAll('.w3-sidebar a').forEach(function(element) {
+  element.addEventListener('click', function() {
+    w3_close();
+  });
+});
+
 
 
 </script>
