@@ -755,7 +755,7 @@ function toggleMenu() {
 
 // Close the menu when clicking outside of it
 window.onclick = function(event) {
-  var menu = document.getElementById("myNavbar");
+  var menu = document.getElementById("mySidebar");
   if (!event.target.matches('.w3-bar-item') && !event.target.matches('.w3-button')) {
     if (menu.className.indexOf("w3-show") !== -1) {
       menu.className = menu.className.replace(" w3-show", "");
