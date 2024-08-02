@@ -74,23 +74,13 @@
       color: #333;
     }
 	@media screen and (max-width: 767px) {
-    #mySidebar{
-        position: fixed;
-        top: 0;
-        left: 0;
-        height: 100%;
-        width: 250px; /* or whatever width you prefer */
-        z-index: 1000;
-        overflow-y: auto;
+    .w3-main {
+      margin-left: 0 !important;
+      margin-top: 83px; /* Adjust this value to match your header height */
     }
 
-    #myOverlay {
-        z-index: 999;
-    }
-	@media screen and (max-width: 767px) {
-    .w3-main {
-        margin-left: 0 !important;
-        margin-top: 83px; /* Adjust this value to match your header height */
+    #mySidebar {
+      width: 250px; /* or whatever width you prefer for mobile */
     }
 }
 }
@@ -205,13 +195,18 @@
 <!-- Top menu on small screens -->
 <header class="w3-bar w3-top w3-hide-large w3-blue-grey w3-large" role="banner">
   <div class="w3-bar-item w3-padding-24">Saugata Bose</div>
-  <a href="javascript:void(0)" class="w3-bar-item w3-button w3-padding-24 w3-right"  style="font-stretch: extra-expanded;" onclick="w3_open()"><b>≡</b></a>
+  <a href="javascript:void(0)" class="w3-bar-item w3-button w3-padding-24 w3-right" style="font-stretch: extra-expanded;" onclick="toggleSidebar()"><b>≡</b></a>
   </div>
 </header>
 
 <!-- Overlay effect when opening sidebar on small screens -->
-<!--<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+<!--
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
 -->
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="toggleSidebar()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+
 <div class="w3-main" style="margin-left:150px;" role="main">
 <!-- !PAGE CONTENT! 
 
@@ -721,7 +716,7 @@ Subsequently, I devise a novel approach, reframing the problem as the constructi
 <script>
 // Accordion 
 function myAccFunc() {
-  var x = document.getElementById("mySidebar");
+  var x = document.getElementById("demoAcc");
   if (x.className.indexOf("w3-show") == -1) {
     x.className += " w3-show";
   } else {
@@ -729,18 +724,19 @@ function myAccFunc() {
   }
 }
 
-// Open the sidebar
-function w3_open() {
-    document.getElementById("mySidebar").style.display = "block";
-    document.getElementById("myOverlay").style.display = "block";
-    document.body.style.overflow = "hidden"; // Prevent scrolling when menu is open
-}
-
-// Close the sidebar
-function w3_close() {
-    document.getElementById("mySidebar").style.display = "none";
-    document.getElementById("myOverlay").style.display = "none";
-    document.body.style.overflow = ""; // Re-enable scrolling
+// Toggle the sidebar
+function toggleSidebar() {
+    var sidebar = document.getElementById("mySidebar");
+    var overlay = document.getElementById("myOverlay");
+    if (sidebar.style.display === "block") {
+        sidebar.style.display = "none";
+        overlay.style.display = "none";
+        document.body.style.overflow = "";
+    } else {
+        sidebar.style.display = "block";
+        overlay.style.display = "block";
+        document.body.style.overflow = "hidden";
+    }
 }
 
 // Event listener for when the DOM is fully loaded
@@ -751,7 +747,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Add click event to hamburger button
     hamburgerButton.addEventListener('click', function(event) {
         event.stopPropagation(); // Prevent event from bubbling up
-        w3_open();
+        toggleSidebar();
     });
 
     // Add click events to sidebar links
@@ -759,10 +755,12 @@ document.addEventListener('DOMContentLoaded', function() {
         link.addEventListener('click', function(event) {
             event.preventDefault(); // Prevent default link behavior
             var href = this.getAttribute('href');
-            w3_close();
+            toggleSidebar(); // Close the sidebar
             setTimeout(function() {
-                window.location.href = href;
-            }, 300); // Delay to allow sidebar to close before navigating
+                document.querySelector(href).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            }, 300); // Delay to allow sidebar to close before scrolling
         });
     });
 
@@ -771,7 +769,7 @@ document.addEventListener('DOMContentLoaded', function() {
         var sidebar = document.getElementById('mySidebar');
         var isClickInside = sidebar.contains(event.target);
         if (!isClickInside && sidebar.style.display === 'block') {
-            w3_close();
+            toggleSidebar();
         }
     });
 });
