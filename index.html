@@ -95,15 +95,20 @@
 			margin-top: 83px; /* Adjust this value to match your header height */
 		}
 	}
+	
 	@media screen and (max-width: 767px) {
-		#mySidebar {
-			display: none;
-			width: 200px;
-			right: 0;
-			top: 0;
-			height: 100%;
-			overflow-y: auto;
-		}
+	  #mySidebar {
+		display: none;
+		width: 200px;
+		right: 0;
+		top: 0;
+		height: 100%;
+		overflow-y: auto;
+	  }
+	  .w3-main {
+		margin-left: 0 !important;
+		margin-top: 83px; /* Adjust this value to match your header height */
+	  }
 	}
 
 	.w3-sidebar a {font-family: "Roboto", sans-serif} body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
@@ -733,55 +738,47 @@ Subsequently, I devise a novel approach, reframing the problem as the constructi
 
 <script>
 // Accordion 
-function myAccFunc() {
-  var x = document.getElementById("demoAcc");
-  if (x.className.indexOf("w3-show") == -1) {
-    x.className += " w3-show";
-  } else {
-    x.className = x.className.replace(" w3-show", "");
-  }
-}
-
 // Toggle the sidebar
 function toggleSidebar() {
-    var sidebar = document.getElementById("mySidebar");
-    var overlay = document.getElementById("myOverlay");
-    if (sidebar.style.display === "block") {
-        sidebar.style.display = "none";
-        overlay.style.display = "none";
-    } else {
-        sidebar.style.display = "block";
-        overlay.style.display = "block";
-    }
+  var sidebar = document.getElementById("mySidebar");
+  var overlay = document.getElementById("myOverlay");
+  if (sidebar.style.display === "block") {
+    sidebar.style.display = "none";
+    overlay.style.display = "none";
+  } else {
+    sidebar.style.display = "block";
+    overlay.style.display = "block";
+  }
 }
 
 // Event listener for when the DOM is fully loaded
 document.addEventListener('DOMContentLoaded', function() {
-    var hamburgerButton = document.querySelector('.w3-bar-item.w3-button.w3-padding-24.w3-right');
-    hamburgerButton.addEventListener('click', toggleSidebar);
+  var hamburgerButton = document.querySelector('.w3-bar-item.w3-button.w3-padding-24.w3-right');
+  hamburgerButton.addEventListener('click', toggleSidebar);
 
-    var sidebarLinks = document.querySelectorAll('#mySidebar a');
-    sidebarLinks.forEach(function(link) {
-        link.addEventListener('click', function(event) {
-            event.preventDefault();
-            var href = this.getAttribute('href');
-            toggleSidebar();
-            setTimeout(function() {
-                document.querySelector(href).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            }, 300);
+  var sidebarLinks = document.querySelectorAll('#mySidebar a');
+  sidebarLinks.forEach(function(link) {
+    link.addEventListener('click', function(event) {
+      event.preventDefault();
+      var href = this.getAttribute('href');
+      toggleSidebar();
+      setTimeout(function() {
+        document.querySelector(href).scrollIntoView({
+          behavior: 'smooth'
         });
+      }, 300);
     });
+  });
 
-    document.addEventListener('click', function(event) {
-        var sidebar = document.getElementById('mySidebar');
-        var hamburgerButton = document.querySelector('.w3-bar-item.w3-button.w3-padding-24.w3-right');
-        if (!sidebar.contains(event.target) && !hamburgerButton.contains(event.target) && sidebar.style.display === 'block') {
-            toggleSidebar();
-        }
-    });
+  document.addEventListener('click', function(event) {
+    var sidebar = document.getElementById('mySidebar');
+    var hamburgerButton = document.querySelector('.w3-bar-item.w3-button.w3-padding-24.w3-right');
+    if (!sidebar.contains(event.target) && !hamburgerButton.contains(event.target) && sidebar.style.display === 'block') {
+      toggleSidebar();
+    }
+  });
 });
+
 </script>
 
 
