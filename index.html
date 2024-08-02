@@ -157,6 +157,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+
 <!-- Sidebar/menu -->
 <nav class="w3-sidebar w3-bar-block w3-blue-grey w3-collapse w3-top w3-right" style="z-index:3;width:150px" id="mySidebar" role="navigation">
   <div class="w3-container w3-display-container w3-padding-16">
@@ -197,8 +201,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </header>
 
-<!-- Overlay effect when opening sidebar on small screens -->
-<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
 
 <div class="w3-main" style="margin-left:150px;" role="main">
 <!-- !PAGE CONTENT! 
@@ -724,23 +726,25 @@ document.getElementById("myBtn").click();
 // Open and close sidebar
 function w3_open() {
   document.getElementById("mySidebar").style.display = "block";
-  document.getElementById("expertiseSidebar").style.display = "block";
   document.getElementById("myOverlay").style.display = "block";
 }
- 
+
 function w3_close() {
   document.getElementById("mySidebar").style.display = "none";
-  document.getElementById("expertiseSidebar").style.display = "none";
   document.getElementById("myOverlay").style.display = "none";
 }
 
 // Close sidebar when clicking outside
 document.addEventListener('click', function (event) {
-  var isClickInside = document.getElementById('mySidebar').contains(event.target);
+  var sidebar = document.getElementById('mySidebar');
+  var overlay = document.getElementById('myOverlay');
+  var isClickInside = sidebar.contains(event.target) || event.target === sidebar || event.target === overlay;
+
   if (!isClickInside) {
     w3_close();
   }
 });
+
 
 </script>
 
