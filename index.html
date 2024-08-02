@@ -164,7 +164,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
   <div class="w3-padding-64 w3-text-light-grey w3-large" style="font-weight:bold">
     <a href="#home" class="w3-bar-item w3-button">Home</a>
-    <a href="#news" class="w3-bar-item w3-button">News</a>
+    <!--<a href="#news" class="w3-bar-item w3-button">News</a>-->
 	<a href="#project" class="w3-bar-item w3-button">Portfolio</a>
     <!-- <a href="#projects" class="w3-bar-item w3-button">Projects</a>
     <a href="#talks" class="w3-bar-item w3-button">Talks</a> -->
@@ -375,7 +375,7 @@ Currently, I'm seeking opportunities to apply my expertise in machine learning a
 
  <!-- The News Section -->
 <div class="w3-row" style="display: flex; flex-wrap: nowrap; justify-content: space-between; gap: 10px;">
-    <div class="w3-container w3-third section-box" id="news">
+    <div class="w3-container w3-third section-box">
         <h2>News</h2>
         <ul class="news-list">
           <li> 08/2024, Conducting tutorial sessions for UTS: 31282 at UTS starting this semester.</li>
@@ -733,6 +733,15 @@ function w3_close() {
   document.getElementById("expertiseSidebar").style.display = "none";
   document.getElementById("myOverlay").style.display = "none";
 }
+
+// Close sidebar when clicking outside
+document.addEventListener('click', function (event) {
+  var isClickInside = document.getElementById('mySidebar').contains(event.target);
+  if (!isClickInside) {
+    w3_close();
+  }
+});
+
 </script>
 
 </body>
