@@ -16,22 +16,15 @@
 </script>
   <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-MLHSGC7T');</script>
-<!-- End Google Tag Manager -->
-  <title>Saugata Bose's Homepage</title>
+	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-MLHSGC7T');
+</script>
 
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <meta name="description" content="Saugata Bose, PhD AI/ML researcher">
-  <meta name="keywords" content="Researcher, Academic, Australia, UOW, University of Wollongong, Machine Learning, NLP, Pattern Recognition, Deep Learning, Classification, Recommendation">
-  <meta name="author" content="Saugata Bose" />
-
-  <link rel="stylesheet" href="w3.css">
-  
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8335360976249671"
+     crossorigin="anonymous">
+</script>
 <style>
     /* Styles for the right sidebar */
     #expertiseSidebar {
@@ -116,6 +109,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 }	
   </style>
 
+<!-- End Google Tag Manager -->
+  <title>Saugata Bose's Homepage</title>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="description" content="Saugata Bose, PhD AI/ML researcher">
+  <meta name="keywords" content="Researcher, Academic, Australia, UOW, University of Wollongong, Machine Learning, NLP, Pattern Recognition, Deep Learning, Classification, Recommendation">
+  <meta name="author" content="Saugata Bose" />
+
+  <link rel="stylesheet" href="w3.css">
+  
+
   <link rel="icon" type="image/png" href="images/icons.png">
   <!--
   <script src="jquery.min.js"></script>
@@ -142,19 +148,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   });
   </script>
   //-->
-
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8335360976249671"
-     crossorigin="anonymous"></script>
-
 </head>
 
 <body class="w3-content" style="margin:0;max-width:100%">
+
 <amp-auto-ads type="adsense"
         data-ad-client="ca-pub-8335360976249671">
 </amp-auto-ads>
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MLHSGC7T"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+	height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>
 <!-- End Google Tag Manager (noscript) -->
 
 <!-- Sidebar/menu -->
@@ -193,7 +197,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- Top menu on small screens -->
 <header class="w3-bar w3-top w3-hide-large w3-blue-grey w3-large" role="banner">
   <div class="w3-bar-item w3-padding-24">Saugata Bose</div>
-  <a href="javascript:void(0)" class="w3-bar-item w3-button w3-padding-24 w3-right"  style="font-stretch: extra-expanded;" onclick="w3_open()"><b>≡</b></a>
+  <a href="javascript:void(0)" class="w3-bar-item w3-button w3-padding-24 w3-right"  style="font-stretch: extra-expanded;" onclick="toggleMenu()"><b>≡</b></a>
   </div>
 </header>
 
@@ -707,6 +711,8 @@ Subsequently, I devise a novel approach, reframing the problem as the constructi
 </div>
 
 <script>
+
+
 // Accordion 
 function myAccFunc() {
   var x = document.getElementById("demoAcc");
@@ -732,6 +738,40 @@ function w3_close() {
   document.getElementById("mySidebar").style.display = "none";
   document.getElementById("expertiseSidebar").style.display = "none";
   document.getElementById("myOverlay").style.display = "none";
+}
+</script>
+
+
+<script>
+// Function to toggle the menu
+function toggleMenu() {
+  var x = document.getElementById("mySidebar");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else {
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+
+// Close the menu when clicking outside of it
+window.onclick = function(event) {
+  var menu = document.getElementById("myNavbar");
+  if (!event.target.matches('.w3-bar-item') && !event.target.matches('.w3-button')) {
+    if (menu.className.indexOf("w3-show") !== -1) {
+      menu.className = menu.className.replace(" w3-show", "");
+    }
+  }
+}
+
+// Close the menu when a menu item is clicked
+var menuItems = document.getElementsByClassName("w3-bar-item");
+for (var i = 0; i < menuItems.length; i++) {
+  menuItems[i].addEventListener("click", function() {
+    var menu = document.getElementById("myNavbar");
+    if (menu.className.indexOf("w3-show") !== -1) {
+      menu.className = menu.className.replace(" w3-show", "");
+    }
+  });
 }
 </script>
 
