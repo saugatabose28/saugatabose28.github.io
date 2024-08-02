@@ -73,6 +73,18 @@
       font-weight: bold;
       color: #333;
     }
+	.w3-overlay {
+		position: fixed;
+		display: none;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background-color: rgba(0,0,0,0.5);
+		z-index: 2;
+	}
 	@media screen and (max-width: 767px) {
 		#mySidebar {
 			width: 250px; /* or whatever width you prefer for mobile */
@@ -81,6 +93,16 @@
 	    .w3-main {
 			margin-left: 0 !important;
 			margin-top: 83px; /* Adjust this value to match your header height */
+		}
+	}
+	@media screen and (max-width: 767px) {
+		#mySidebar {
+			display: none;
+			width: 200px;
+			right: 0;
+			top: 0;
+			height: 100%;
+			overflow-y: auto;
 		}
 	}
 
@@ -311,7 +333,11 @@
 <!-- End Google Tag Manager (noscript) -->
 
 <!-- Sidebar/menu -->
+<!--
 <nav class="w3-sidebar w3-bar-block w3-blue-grey w3-collapse w3-top w3-right" style="z-index:3;width:150px" id="mySidebar" role="navigation">
+-->
+<nav class="w3-sidebar w3-bar-block w3-blue-grey w3-collapse w3-fixed" style="z-index:3;width:150px" id="mySidebar" role="navigation">  
+
   <div class="w3-container w3-display-container w3-padding-16">
     <h3><b>Saugata Bose, PhD</b></h3>
   </div>
@@ -723,44 +749,35 @@ function toggleSidebar() {
     if (sidebar.style.display === "block") {
         sidebar.style.display = "none";
         overlay.style.display = "none";
-        document.body.style.overflow = "";
     } else {
         sidebar.style.display = "block";
         overlay.style.display = "block";
-        document.body.style.overflow = "hidden";
     }
 }
 
 // Event listener for when the DOM is fully loaded
 document.addEventListener('DOMContentLoaded', function() {
-    var sidebarLinks = document.querySelectorAll('#mySidebar a');
     var hamburgerButton = document.querySelector('.w3-bar-item.w3-button.w3-padding-24.w3-right');
+    hamburgerButton.addEventListener('click', toggleSidebar);
 
-    // Add click event to hamburger button
-    hamburgerButton.addEventListener('click', function(event) {
-        event.stopPropagation(); // Prevent event from bubbling up
-        toggleSidebar();
-    });
-
-    // Add click events to sidebar links
+    var sidebarLinks = document.querySelectorAll('#mySidebar a');
     sidebarLinks.forEach(function(link) {
         link.addEventListener('click', function(event) {
-            event.preventDefault(); // Prevent default link behavior
+            event.preventDefault();
             var href = this.getAttribute('href');
-            toggleSidebar(); // Close the sidebar
+            toggleSidebar();
             setTimeout(function() {
                 document.querySelector(href).scrollIntoView({
                     behavior: 'smooth'
                 });
-            }, 300); // Delay to allow sidebar to close before scrolling
+            }, 300);
         });
     });
 
-    // Close sidebar when clicking outside
     document.addEventListener('click', function(event) {
         var sidebar = document.getElementById('mySidebar');
-        var isClickInside = sidebar.contains(event.target);
-        if (!isClickInside && sidebar.style.display === 'block') {
+        var hamburgerButton = document.querySelector('.w3-bar-item.w3-button.w3-padding-24.w3-right');
+        if (!sidebar.contains(event.target) && !hamburgerButton.contains(event.target) && sidebar.style.display === 'block') {
             toggleSidebar();
         }
     });
