@@ -719,11 +719,9 @@ Subsequently, I devise a novel approach, reframing the problem as the constructi
 </div>
 
 <script>
-
-
 // Accordion 
 function myAccFunc() {
-  var x = document.getElementById("demoAcc");
+  var x = document.getElementById("mySidebar");
   if (x.className.indexOf("w3-show") == -1) {
     x.className += " w3-show";
   } else {
@@ -731,66 +729,54 @@ function myAccFunc() {
   }
 }
 
-// Click on the "Jeans" link on page load to open the accordion for demo purposes
-document.getElementById("myBtn").click();
-
-
+// Open the sidebar
 function w3_open() {
     document.getElementById("mySidebar").style.display = "block";
-    //document.getElementById("expertiseSidebar").style.display = "block";
     document.getElementById("myOverlay").style.display = "block";
     document.body.style.overflow = "hidden"; // Prevent scrolling when menu is open
 }
 
+// Close the sidebar
 function w3_close() {
     document.getElementById("mySidebar").style.display = "none";
-    //document.getElementById("expertiseSidebar").style.display = "none";
     document.getElementById("myOverlay").style.display = "none";
     document.body.style.overflow = ""; // Re-enable scrolling
 }
+
+// Event listener for when the DOM is fully loaded
 document.addEventListener('DOMContentLoaded', function() {
-    var sidebarLinks = document.querySelectorAll('#mySidebar a, #expertiseSidebar a');
+    var sidebarLinks = document.querySelectorAll('#mySidebar a');
+    var hamburgerButton = document.querySelector('.w3-bar-item.w3-button.w3-padding-24.w3-right');
+
+    // Add click event to hamburger button
+    hamburgerButton.addEventListener('click', function(event) {
+        event.stopPropagation(); // Prevent event from bubbling up
+        w3_open();
+    });
+
+    // Add click events to sidebar links
     sidebarLinks.forEach(function(link) {
-        link.addEventListener('click', function() {
+        link.addEventListener('click', function(event) {
+            event.preventDefault(); // Prevent default link behavior
+            var href = this.getAttribute('href');
             w3_close();
+            setTimeout(function() {
+                window.location.href = href;
+            }, 300); // Delay to allow sidebar to close before navigating
         });
+    });
+
+    // Close sidebar when clicking outside
+    document.addEventListener('click', function(event) {
+        var sidebar = document.getElementById('mySidebar');
+        var isClickInside = sidebar.contains(event.target);
+        if (!isClickInside && sidebar.style.display === 'block') {
+            w3_close();
+        }
     });
 });
 </script>
 
-
-<script>
-// Function to toggle the menu
-function toggleMenu() {
-  var x = document.getElementById("myNavbar");
-  if (x.className.indexOf("w3-show") == -1) {
-    x.className += " w3-show";
-  } else {
-    x.className = x.className.replace(" w3-show", "");
-  }
-}
-
-// Close the menu when clicking outside of it
-window.onclick = function(event) {
-  var menu = document.getElementById("myNavbar");
-  if (!event.target.matches('.w3-bar-item') && !event.target.matches('.w3-button')) {
-    if (menu.className.indexOf("w3-show") !== -1) {
-      menu.className = menu.className.replace(" w3-show", "");
-    }
-  }
-}
-
-// Close the menu when a menu item is clicked
-var menuItems = document.getElementsByClassName("w3-bar-item");
-for (var i = 0; i < menuItems.length; i++) {
-  menuItems[i].addEventListener("click", function() {
-    var menu = document.getElementById("myNavbar");
-    if (menu.className.indexOf("w3-show") !== -1) {
-      menu.className = menu.className.replace(" w3-show", "");
-    }
-  });
-}
-</script>
 
 </body>
 </html>
