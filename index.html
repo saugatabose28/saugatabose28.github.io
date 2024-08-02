@@ -74,15 +74,24 @@
       color: #333;
     }
 	@media screen and (max-width: 767px) {
-    .w3-main {
-      margin-left: 0 !important;
-      margin-top: 83px; /* Adjust this value to match your header height */
-    }
+		#mySidebar{
+			position: fixed;
+			top: 0;
+			left: 0;
+			height: 100%;
+			width: 250px; /* or whatever width you prefer */
+			z-index: 1000;
+			overflow-y: auto;
+		}
 
-    #mySidebar {
-      width: 250px; /* or whatever width you prefer for mobile */
-    }
-}
+		#myOverlay {
+			z-index: 999;
+		}
+	    .w3-main {
+			margin-left: 0 !important;
+			margin-top: 83px; /* Adjust this value to match your header height */
+		}
+	}
 }
   </style>
 
@@ -205,7 +214,6 @@
 -->
 <!-- Overlay effect when opening sidebar on small screens -->
 <div class="w3-overlay w3-hide-large" onclick="toggleSidebar()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
-
 
 <div class="w3-main" style="margin-left:150px;" role="main">
 <!-- !PAGE CONTENT! 
