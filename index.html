@@ -184,16 +184,6 @@
 
 
 
-<!-- New Sidebar for Chitchat 
-  <nav class="w3-sidebar w3-bar-block w3-blue-grey w3-collapse w3-right" style="z-index:3;width:300px;right:0" id="mySidebar1">
-    <div class="w3-container w3-display-container w3-padding-16">
-      <h3><b>Chitchat</b></h3>
-    </div>
-    <div class="w3-padding-16 w3-text-light-grey w3-large">
-      <p>Here you can display any chitchat information.</p>
-    </div>
-  </nav>
- -->
 <!-- Top menu on small screens -->
 <header class="w3-bar w3-top w3-hide-large w3-blue-grey w3-large" role="banner">
   <div class="w3-bar-item w3-padding-24">Saugata Bose</div>
@@ -201,8 +191,6 @@
   </div>
 </header>
 
-<!-- Overlay effect when opening sidebar on small screens -->
-<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
 
 <div class="w3-main" style="margin-left:150px;" role="main">
 <!-- !PAGE CONTENT! 
@@ -713,32 +701,7 @@ Subsequently, I devise a novel approach, reframing the problem as the constructi
 <script>
 
 
-// Accordion 
-function myAccFunc() {
-  var x = document.getElementById("demoAcc");
-  if (x.className.indexOf("w3-show") == -1) {
-    x.className += " w3-show";
-  } else {
-    x.className = x.className.replace(" w3-show", "");
-  }
-}
 
-// Click on the "Jeans" link on page load to open the accordion for demo purposes
-document.getElementById("myBtn").click();
-
-
-// Open and close sidebar
-function w3_open() {
-  document.getElementById("mySidebar").style.display = "block";
-  document.getElementById("expertiseSidebar").style.display = "block";
-  document.getElementById("myOverlay").style.display = "block";
-}
- 
-function w3_close() {
-  document.getElementById("mySidebar").style.display = "none";
-  document.getElementById("expertiseSidebar").style.display = "none";
-  document.getElementById("myOverlay").style.display = "none";
-}
 </script>
 
 
