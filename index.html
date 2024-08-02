@@ -26,264 +26,262 @@
      crossorigin="anonymous">
 </script>
 <style>
-    /* Styles for the right sidebar */
-    #expertiseSidebar {
-      position: fixed;
-      top: 0;
-      right: 20px;
-      width: 280px;
-      height: 100vh;
-      background-color: transparent;
-      padding: 20px;
-      
-      z-index: 3;
-      overflow-y: auto;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: left;
-      text-align: left;
-      font-family: Arial, sans-serif;
-    }
-	
-	#expertiseSidebar .content{
-	  background-color: transparent;
-      padding: 20px;
-	  border-radius: 5px
-	}
-
-    #expertiseSidebar h3 {
-      text-align: center;
-      font-size: 18px;
-      font-weight: bold;
-      margin-bottom: 20px;
-    }
-
-    #expertiseSidebar ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-
-    #expertiseSidebar li {
-      margin-bottom: 10px;
-    }
-
-    #expertiseSidebar li strong {
-      font-weight: bold;
-      color: #333;
-    }
-	.w3-overlay {
-		position: fixed;
-		display: none;
-		width: 100%;
-		height: 100%;
-		top: 0;
-		left: 0;
-		right: 0;
-		bottom: 0;
-		background-color: rgba(0,0,0,0.5);
-		z-index: 2;
-	}
-	@media screen and (max-width: 767px) {
-		#mySidebar {
-			width: 250px; /* or whatever width you prefer for mobile */
-		}
-
-	    .w3-main {
-			margin-left: 0 !important;
-			margin-top: 83px; /* Adjust this value to match your header height */
-		}
-	}
-	
-	@media screen and (max-width: 767px) {
-	  #mySidebar {
-		display: none;
-		width: 200px;
-		right: 0;
-		top: 0;
-		height: 100%;
-		overflow-y: auto;
-	  }
-	  .w3-main {
-		margin-left: 0 !important;
-		margin-top: 83px; /* Adjust this value to match your header height */
-	  }
-	}
-
-	.w3-sidebar a {font-family: "Roboto", sans-serif} body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
-	footer {
-            background-color: #f4f4f4;
-            padding: 10px;            
-            text-align: center;
-            position: sticky;
-            bottom: 0;
-            width: 100%;
-        }
-		hr {
-            margin: 0;
-            border: 1px solid #ccc;
-        }
-	.highlight {
-		  animation-name: highlight;
-		  animation-duration: 1s;
-		  animation-iteration-count: infinite;
-		  animation-direction: alternate;
-		  background-color: yellow;
-		}
-
-	@keyframes highlight {
-		from {
-			background-color: yellow;
-		}
-
-		to {
-			background-color: transparent;
-		}
-	}	
-	.w3-row {
-			max-width: 100%;
-			overflow-x: auto;
-		}
-
-	.section-box {
-		background-color: #f5f5f5;
-		border: 1px solid #e0e0e0;
-		padding: 15px;
-		margin: 5px;
-		height: 400px;
-		overflow-y: auto;
-	}
-
-	.section-box h2 {
-		color: #333;
-		border-bottom: 2px solid #4a90e2;
-		padding-bottom: 5px;
-		margin-bottom: 10px;
-	}
-	
-	.section-box h3 {
-		color: #333;
-		border-bottom: 2px solid #4a90e2;
-		padding-bottom: 5px;
-		margin-bottom: 10px;
-	}
-	
-	.section-box h4 {
-		color: #333;
-		border-bottom: 2px solid #4a90e2;
-		padding-bottom: 5px;
-		margin-bottom: 10px;
-	}
-
-	.news-list {
-		padding-left: 20px;
-		font-size: 14px;
-	}
-
-	.news-list li {
-		margin-bottom: 8px;
-	}
-
-	.highlight {
-		font-weight: bold;
-		color: #4a90e2;
-	}
-
-	.education-box {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		text-align: center;
-		background-color: transparent;
-		border: none;
-		box-shadow: none;
-		height: auto;
-	}
-
-	.education-content {
-		width: 100%;
-		background-color: #f5f5f5;
-		border: 1px solid #e0e0e0;
-		border-radius: 8px;
-		padding: 15px;
-	}
-
-	.education-item {
-		margin-bottom: 10px;
-	}
-
-	.education-item h4 {
-		color: #4a90e2;
-		margin-bottom: 5px;
-		display: inline-block;
-		position: relative;
-	}
-
-	.education-item h4::after {
-		content: '';
-		position: absolute;
-		left: 0;
-		bottom: -2px;
-		width: 100%;
-		height: 2px;
-		background-color: #4a90e2;
-	}
-
-	.education-item p {
-		margin: 0;
-		font-style: italic;
-	}
-
-	.expertise-box {
-		border-radius: 80%;
-		width: 360px;
-		height: 360px;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		text-align: center;
-		padding: 20px;
-		border-color: #4a90e2;
-		
-	}
-
-	.expertise-content {
-		font-size: 12px;
-		overflow-y: auto;
-		max-height: 100%;
-	}
-	
-	@media screen and (max-width: 767px) {
-    .w3-row {
-        flex-direction: column;
-        overflow-x: visible;
-    }
-
-    .section-box {
-        width: 100%;
-        height: auto;
-        margin: 10px 0;
-    }
-
-    .expertise-box {
-        border-radius: 0;
-        width: 100%;
-        height: auto;
-    }
-
-    .education-box {
-        width: 100%;
-    }
-
-    .education-content {
-        width: 100%;
-    }
+/* Styles for the right sidebar */
+#expertiseSidebar {
+  position: fixed;
+  top: 0;
+  right: 20px;
+  width: 280px;
+  height: 100vh;
+  background-color: transparent;
+  padding: 20px;
+  z-index: 3;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  text-align: left;
+  font-family: Arial, sans-serif;
 }
 
-  </style>
+#expertiseSidebar .content {
+  background-color: transparent;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+#expertiseSidebar h3 {
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+#expertiseSidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#expertiseSidebar li {
+  margin-bottom: 10px;
+}
+
+#expertiseSidebar li strong {
+  font-weight: bold;
+  color: #333;
+}
+
+.w3-overlay {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 2;
+}
+
+@media screen and (max-width: 767px) {
+  #mySidebar {
+    display: none;
+    width: 250px; /* Adjust width for mobile */
+    right: 0;
+    top: 0;
+    height: 100%;
+    overflow-y: auto;
+  }
+
+  .w3-main {
+    margin-left: 0 !important;
+    margin-top: 83px; /* Adjust this value to match your header height */
+  }
+}
+
+.w3-sidebar a {
+  font-family: "Roboto", sans-serif;
+}
+
+body, h1, h2, h3, h4, h5, h6, .w3-wide {
+  font-family: "Montserrat", sans-serif;
+}
+
+footer {
+  background-color: #f4f4f4;
+  padding: 10px;
+  text-align: center;
+  position: sticky;
+  bottom: 0;
+  width: 100%;
+}
+
+hr {
+  margin: 0;
+  border: 1px solid #ccc;
+}
+
+.highlight {
+  animation-name: highlight;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  background-color: yellow;
+}
+
+@keyframes highlight {
+  from {
+    background-color: yellow;
+  }
+  to {
+    background-color: transparent;
+  }
+}
+
+.w3-row {
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+.section-box {
+  background-color: #f5f5f5;
+  border: 1px solid #e0e0e0;
+  padding: 15px;
+  margin: 5px;
+  height: 400px;
+  overflow-y: auto;
+}
+
+.section-box h2 {
+  color: #333;
+  border-bottom: 2px solid #4a90e2;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+}
+
+.section-box h3 {
+  color: #333;
+  border-bottom: 2px solid #4a90e2;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+}
+
+.section-box h4 {
+  color: #333;
+  border-bottom: 2px solid #4a90e2;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+}
+
+.news-list {
+  padding-left: 20px;
+  font-size: 14px;
+}
+
+.news-list li {
+  margin-bottom: 8px;
+}
+
+.highlight {
+  font-weight: bold;
+  color: #4a90e2;
+}
+
+.education-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+  height: auto;
+}
+
+.education-content {
+  width: 100%;
+  background-color: #f5f5f5;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 15px;
+}
+
+.education-item {
+  margin-bottom: 10px;
+}
+
+.education-item h4 {
+  color: #4a90e2;
+  margin-bottom: 5px;
+  display: inline-block;
+  position: relative;
+}
+
+.education-item h4::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 2px;
+  background-color: #4a90e2;
+}
+
+.education-item p {
+  margin: 0;
+  font-style: italic;
+}
+
+.expertise-box {
+  border-radius: 80%;
+  width: 360px;
+  height: 360px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  border-color: #4a90e2;
+}
+
+.expertise-content {
+  font-size: 12px;
+  overflow-y: auto;
+  max-height: 100%;
+}
+
+@media screen and (max-width: 767px) {
+  .w3-row {
+    flex-direction: column;
+    overflow-x: visible;
+  }
+
+  .section-box {
+    width: 100%;
+    height: auto;
+    margin: 10px 0;
+  }
+
+  .expertise-box {
+    border-radius: 0;
+    width: 100%;
+    height: auto;
+  }
+
+  .education-box {
+    width: 100%;
+  }
+
+  .education-content {
+    width: 100%;
+  }
+}
+</style>
 
 <!-- End Google Tag Manager -->
   <title>Saugata Bose's Homepage</title>
@@ -365,7 +363,7 @@
 <header class="w3-bar w3-top w3-hide-large w3-blue-grey w3-large" role="banner">
   <div class="w3-bar-item w3-padding-24">Saugata Bose</div>
   <a href="javascript:void(0)" class="w3-bar-item w3-button w3-padding-24 w3-right" style="font-stretch: extra-expanded;" onclick="toggleSidebar()"><b>≡</b></a>
-  </div>
+  
 </header>
 
 <!-- Overlay effect when opening sidebar on small screens -->
@@ -737,7 +735,6 @@ Subsequently, I devise a novel approach, reframing the problem as the constructi
 </div>
 
 <script>
-// Accordion 
 // Toggle the sidebar
 function toggleSidebar() {
   var sidebar = document.getElementById("mySidebar");
@@ -779,8 +776,7 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
-</script>
-
+  </script>
 
 </body>
 </html>
