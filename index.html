@@ -94,6 +94,13 @@
 
 		.w3-sidebar a {font-family: "Roboto", sans-serif}
 		body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
+		.projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+    .project-card { background: #fafafa; border: 1px solid #ddd; border-radius: 5px; padding: 15px; }
+    .project-card figure { margin: 0 0 10px; }
+    .project-card img { max-width: 100%; height: auto; border: 1px solid #ccc; border-radius: 3px; }
+    .project-card figcaption { font-size: 0.9em; color: #555; text-align: center; }
+    .project-card h3 { margin-top: 5px; font-size: 1.1em; }
+    .project-card p { font-size: 0.95em; }
 		footer {
 				background-color: #f4f4f4;
 				padding: 10px;            
@@ -388,11 +395,8 @@
 		<div class="projects-grid">
       <!-- Project 1: Deep One-Class Hate Speech Detection -->
       <div class="project-card">
-        <figure>
-		  <!--<img style="width: 90%;max-width: 520px" alt="profile photo" src="images/sb.jpg">-->
-          <img src="images/image1.jpg" alt="Deep One-Class Hate Speech Detection Model Diagram">
-          <figcaption>Deep One-Class Hate Speech Detection Model architecture (BERT + BiLSTM feature extractor, One-Class SVM classifier).</figcaption>
-        </figure>
+		<img style="width: 90%;max-width: 520px" alt="Deep One-Class Hate Speech Detection Model Diagram" src="images/image1.jpg"> 
+  
         <h3>Deep One-Class Hate Speech Detector (LREC 2022)</h3>
         <p>This project introduces a <strong>one-class</strong> approach to hate speech detection&#8203;:contentReference[oaicite:2]{index=2}. The model uses a BERT-based encoder combined with a BiLSTM to extract deep textual features, and a one-class SVM to identify hate speech posts as inliers while treating others as outliers&#8203;:contentReference[oaicite:3]{index=3}. Trained using <strong>PyTorch</strong> on combined benchmark datasets (e.g., <em>SemEval-2019</em>, <em>HASOC 2019</em>)&#8203;:contentReference[oaicite:4]{index=4}, the detector outperformed binary classifiers, improving recall for hate speech across diverse datasets&#8203;:contentReference[oaicite:5]{index=5}. This work highlights the advantage of one-class modeling in highly imbalanced scenarios, and training on a fusion of datasets enhanced its generalization&#8203;:contentReference[oaicite:6]{index=6}.</p>
       </div>
