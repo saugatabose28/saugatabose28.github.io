@@ -395,7 +395,7 @@
 		<div class="projects-grid">
       <!-- Project 1: Deep One-Class Hate Speech Detection -->
       <div class="project-card">
-		<img style="width: 90%;max-width: 520px" alt="Deep One-Class Fine-Tuning architecture (Transfer Learning + One-Class SVM-based loss)." src="images/image1.jpg"> 
+		<img style="width: 90%;max-width: 650px" alt="Deep One-Class Fine-Tuning architecture (Transfer Learning + One-Class SVM-based loss)." src="images/image1.jpg"> 
         <h3>Deep One-Class Fine-Tuning (ADMA 2023)</h3>
         <p>This project introduces <strong>DOCFT</strong> (Deep One-Class Fine-Tuning), a two-stage transfer learning framework tailored for short-text classification on <em>imbalanced datasets</em>. It employs a <strong>BERT encoder</strong> fine-tuned using a novel <strong>OC-SVM loss function</strong> combined with <strong>quantile regression</strong>. The model is trained in two alternating phases: one that adapts pre-trained features to anomaly-like samples, and another that optimizes the decision boundary using one-class principles.
         <br><br>
@@ -404,7 +404,9 @@
       <!-- Project 2: LexiFusedNet & LexiFuse+ -->
       <div class="project-card">
         <h3>LexiFusedNet &amp; LexiFuse+ (Lexicon-Fused One-Class Models)</h3>
-        <p><strong>LexiFusedNet</strong> and its enhanced version <strong>LexiFuse+</strong> are unified models tackling short-text classification on imbalanced data by fusing lexical knowledge with deep learning. These models leverage a hate speech lexicon (HateBase) to weight input features, combined with BERT transfer learning and one-class classification&#8203;:contentReference[oaicite:7]{index=7}&#8203;:contentReference[oaicite:8]{index=8}. LexiFuse+ introduces semi-supervised training using unlabeled data and a custom one-class loss function for fine-tuning&#8203;:contentReference[oaicite:9]{index=9}. This novel integration of lexicon-based features and one-class transfer learning achieved state-of-the-art results in hate speech detection, with LexiFuse+ yielding high macro-F1 scores (e.g., 0.88 on Davidson and Stormfront datasets)&#8203;:contentReference[oaicite:10]{index=10} – a 2–6% improvement over models without lexicon fusion&#8203;:contentReference[oaicite:11]{index=11}. These projects demonstrate how linguistic domain knowledge (lexicons) can be combined with deep networks to improve detection of toxic content under extreme class imbalance.</p>
+         <p><strong>LexiFusedNet</strong> and its enhanced version <strong>LexiFuse+</strong> are unified models tackling short-text classification on imbalanced data by fusing lexical knowledge with deep learning. These models leverage a hate speech lexicon (HateBase) to weight input features, combined with BERT transfer learning and one-class classification. <strong>LexiFuse+</strong> introduces semi-supervised training using unlabeled data and a custom one-class loss function for fine-tuning.
+        <br><br>
+        This novel integration of lexicon-based features and one-class transfer learning achieved state-of-the-art results in hate speech detection, with LexiFuse+ yielding high macro-F1 scores (e.g., <strong>0.88</strong> on Davidson and Stormfront datasets) – a <strong>2–6%</strong> improvement over models without lexicon fusion. These projects demonstrate how linguistic domain knowledge (lexicons) can be combined with deep networks to improve detection of toxic content under extreme class imbalance.</p>
 		<img style="width: 100%;max-width: 650px" alt="Deep One-Class Hate Speech Detection Model Diagram" src="images/image2.jpg"> 
 
 	  </div>
