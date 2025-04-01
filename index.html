@@ -328,7 +328,7 @@
 		  <img style="width: 90%;max-width: 520px" alt="profile photo" src="images/sb.jpg"> 
 		    <header>
 			<h1>Saugata Bose</h1>
-			<p>Lecturer at CIM | AI/ML Researcher | Python Developer</p>
+			<p>Lecturer | AI/ML Researcher | Python Developer</p>
 		  </header>
 		 
 			<p class="w3-justify" style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;max-width:850px">
@@ -439,82 +439,34 @@
 	<!-- The News Section -->
 	  <div class="w3-container w3-padding-32" id="project">
 	   <h2>Portfolio</h2>
-	   <ol>
-		  <p>
-		  <li><strong> Binary Data Mastery: Advanced File Handling and Reverse Engineering</strong>
-		  <br>
+	   <div class="projects-grid">
 
-		  As the Project Lead , I oversaw and guided a cohort of approximately 100 members through the successful execution of this high-tech assignment. The project encompassed two pivotal programming task assignments that centered on adeptly manipulating binary data stored in files utilizing the Unix I/O interface. In the initial stage, groups focused on initializing a C struct and presenting it as formatted text, a process crucial for developing proficiency in declaring and initializing C structs, and employing precise formatting via printf for diverse data types. Stage 2 involved advanced binary file processing, necessitating adeptness in file handling, binary data extraction, and leveraging command-line parameters for dynamic file processing.
+      <div class="project-card">
+        <h3>Big Data COVID-19 Analysis</h3>
+        <p>Implemented Apache Spark with PySpark to analyze large-scale COVID-19 datasets. Conducted distributed aggregation, filtering, and join operations. Applied MLlib for trend prediction and anomaly detection using logistic regression and KMeans clustering. Visualized results using matplotlib and seaborn. Demonstrated efficient big data handling and predictive analytics on pandemic trends.</p>
+      </div>
 
-	Progressing to Stage 3, the emphasis shifted to the strategic sorting of binary data files within a known format. This demanded adeptness in file manipulation strategies, dynamic memory allocation, and efficient utilization of system library routines for optimal sorting. Finally, Stage 4 unveiled the challenge of reverse engineering an enigmatic data file format. This stage honed crucial skills in recognizing and interpreting varied binary data formats and seamlessly converting data across disparate formats.
+      <div class="project-card">
+        <h3>Customer Churn Prediction</h3>
+        <p>Built a machine learning pipeline using Python (pandas, sklearn) to analyze customer churn behavior. Performed feature engineering, model training (Random Forest, Logistic Regression, XGBoost), and model evaluation (ROC, precision-recall). Deployed trained models and used SHAP for explainability. Demonstrated real-world business analytics use-case and customer retention insights.</p>
+      </div>
 
-	<br>Our success in this project underscores our prowess in teamwork, precise communication, and the application of fundamental programming skills. It demonstrates our collective ability to navigate intricate challenges and deliver results proficiently, significantly elevating our understanding of advanced binary data handling in contemporary IT landscapes.
-		  </p>
-		  
-		  <p>
-		  <li><strong> Integrated Software Quality Assurance and Testing Analysis</strong>
+      <div class="project-card">
+        <h3>Security Log Analysis & Encryption Practice</h3>
+        <p>Designed tutorials to analyze system logs using regular expressions and Python. Implemented IP and URL extraction from logs, 404 error tracking, and email pattern detection. Demonstrated symmetric encryption using Fernet (Cryptography module), and SHA256 + Base64 conversions. Built a password-cracking simulation based on 6-digit PINs using brute force and hash verification.</p>
+      </div>
 
-		  <br>
-		  This project encompasses three key tasks centered around software quality assurance (SQA) processes and software testing. In the first task, we study the SQA process of a designated open source software project or a similar one (we examine Apache Kafka), analyzing verification and validation activities, testing frameworks, specific testing and analysis processes, and other relevant aspects. The second task involves a comprehensive review of five selected testing tools (Selenium, Postman REST Client, Splinter, Appium and PYtest), followed by the creation and execution of over 1,000 unique test cases for a chosen software application, aiming to detect and report failures linked to the bug tracking system. EvoSuite was used to generate automatic test cases. The third task focuses on exploring a bug dataset (we examine Defects4j which contains 835 bugs plus 29 deprecated bugs), understanding its projects and defects, identifying relevant test cases and techniques for specific bugs, attempting code modifications to rectify these, and optionally discovering new bugs or investigating automatic repair tools applied to the dataset. This project aims to impart a thorough understanding of software quality assurance, testing tools, and bug analysis, encouraging practical application and enhancing students' proficiency in ensuring software quality and reliability.
+      <div class="project-card">
+        <h3>TF-IDF Based JavaScript Tracker Detection</h3>
+        <p>Developed a Python pipeline to classify tracking vs functional JavaScript files using TF-IDF feature extraction. Applied unsupervised (KMeans), semi-supervised (One-Class SVM), and supervised (SVC) learning. Achieved 99.7% AUC with SVC, highlighting model tuning and contamination control strategies.</p>
+      </div>
 
-	<br>We detect and fix bugs from following projects of Defects4j - jfreechart, commons-cli, closure-compiler, commons-codec, commons-collections, commons-compress, commons-csv, gson, jackson-core, jackson-databind, jackson-dataformat-xml, jsoup, commons-jxpath, commons-lang, commons-math, Mockito and joda-time.
+      <div class="project-card">
+        <h3>Short Text Classification with BERT + One-Class SVM</h3>
+        <p>Created hybrid anomaly detector combining BERT embeddings and one-class SVM to identify hate speech in imbalanced datasets. Implemented in PyTorch using HuggingFace Transformers. Datasets: SemEval-2019, HASOC-2019, Davidson, Stormfront. Demonstrated how transfer learning and outlier modeling address skewed NLP classification tasks.</p>
+      </div>
 
-	<br>Automatic software repairs tools- NOPOL, Elixir are examined to fix bugs in a program, JIRA was used for tracking project progress.	  
-		</p>
-
-		  <p>
-		  <li><strong> Binary Bomb Defusal</strong>
-
-		  <br>The “Binary Bomb Defusal” project presented a unique challenge that required a deep understanding of binary programs and a keen eye for detail. The task involved a binary bomb program with multiple phases, each requiring specific input to proceed. The stakes were high, as any incorrect input would result in a virtual ‘explosion,’ and there was a limited time to defuse the bomb.
-
-	To tackle this challenge, we utilized various strategies and tools. We employed debugging tools like gdb to gain insights into the program’s operation. A crucial part of the process was understanding and interpreting assembly code, which allowed us to decipher the requirements for each phase of the bomb program.
-
-	<br>We also applied control constructs analysis to understand the flow of the program better and predict its behavior based on different inputs. One of the significant challenges we faced was potential buffer overflow exploits, which we addressed by carefully analyzing the program and ensuring that our inputs did not exceed the allocated memory.
-
-	<br>This project was not just about defusing a binary bomb; it was about enhancing our debugging skills for real-world scenarios. It emphasized problem-solving and critical thinking abilities, skills that are invaluable in the field of computer science. Through this project, we learned to navigate complex challenges and deliver solutions under pressure.
-		</p>
-		
-		<p>
-		  <li><strong> CyberSec Innovation: Entropy-Driven Attack Detection & Web Tracking Solutions</strong>
-
-		  <br>We meticulously analyze server-log data, harnessing entropy analysis to unearth attack methodologies and strengthen network security. Isolation Forest takes the lead, outperforming Local Outlier Factor in speed and accuracy for detecting outliers. Identifying attack anomalies hinges on spotting non-standard services and telnet requests. The pivotal role of entropy in attack detection cannot be overstated; it facilitates the identification of anomalies by assessing combinations of IP addresses and ports. Yet, detecting attacks with similar IP addresses and ports poses challenges, underlining the need for diverse models and comparative analysis for effective anomaly detection.
-
-	<br>Within the realm of machine learning, our mission is to pioneer a model differentiating between functional and tracking JavaScript codes. We leverage TF-IDF for feature extraction and meticulous experimentation to elevate web tracking security. Our toolkit comprises three models: One-Class SVM, K-Means (k=2), and SVC, representing PU Learning and Supervised Learning for thorough evaluation. We apply TF-IDF to both functional and tracking JavaScript files and meticulously partition the data into training and testing sets. One-Class SVM, initially set with 50% contamination, delivers a 56% AUC, further enhanced to 61% AUC with contamination adjustments. K-Means (k=2) yields a more modest AUC of 41% compared to OCSVM. However, SVC emerges as the star player, displaying exceptional results (99.7% AUC, 99.5% TPR, 0% FPR), which may initially hint at overfitting but is confirmed otherwise through cross-validation. This underscores the pivotal role of classifier selection, with supervised learning, particularly SVC, demonstrating its mettle in delivering accuracy and task effectiveness.	
-	   </p>
-	   
-		<p>
-		  <li><strong> SprintCycles: Agile IT Transformation for MercuryCyclists</strong>
-
-		  <br>The project's core objective revolves around crafting a robust IT System for MercuryCyclists Inc., a prominent local bicycle company situated in Illawarra. This initiative encompasses the development of pivotal services for procurement, inventory management, sales, and business intelligence, all orchestrated within a sophisticated N-Tier architecture.
-
-			Key challenges encompass the meticulous alignment of service components within the N-Tier architecture, ensuring seamless RESTful communication, and skillfully implementing advanced technologies like Spring Boot and Apache Kafka. As a project lead overseeing a team of 50 members, effective group formation, early project commencement, and seamless integration of microservices are imperative for success.
-
-		<br>Progressing through distinct phases, Part A entails the creation of a prototype for the Procurement Service using Spring Boot and RESTful services. Advancing to Part B, the project scales into an integrated microservices system seamlessly merging procurement, inventory, and sales services. Finally, Part C enriches the system by incorporating real-time stream processing and an event-driven architecture through Apache Kafka, enhancing the prowess of the business intelligence component. Throughout the project, early initiation and meticulous documentation are emphasized, ensuring a well-structured and successful outcome. 
-		</p>
-
-		<p>
-		<li><strong> Machine Learning Mastery in Classification, Clustering, and Anomaly Detection</strong>
-
-		  <br>Leading a team of approximately 35 members, our mission centered on executing a comprehensive data analysis utilizing machine learning models for classification, clustering, and anomaly detection across three diverse datasets. Python, alongside essential libraries like pandas, numpy, and scikit-learn, served as our primary toolkit for implementing robust data analysis programs. In Task 1, addressing multi-class classification within Landsat Satellite Data demanded careful hyperparameter tuning for K-NN and decision tree classifiers. Task 2 posed the challenge of clustering on unprocessed power consumption data, necessitating thoughtful feature extraction, addressing missing values, and standardization. Task 3 involved building a predictive model for anomaly detection in network traffic data, distinguishing between intrusions and normal connections, leveraging methods like Mahalanobis distance, KNN distance, LOF, and iForest. Our diligent approach emphasized performance evaluation, feature selection, and hyperparameter tuning, ensuring model reliability and robustness, all reported and visualized meticulously for informed decision-making. Through a structured and thorough approach, we successfully implemented and gleaned valuable insights from diverse data analysis tasks.
-		  </p>	
-		  
-				<p>
-		<li><strong> Short-text classificaiton: Implementing BERT based Deep NN-V1.1</strong>
-
-		  <br>The proposed model synergizes advanced deep learning methodologies, integrating a cutting-edge encoder model, BERT, and a recurrent neural network (RNN). This amalgamation presents a contemporary perspective on anomaly detection, particularly excelling in discerning intricate linguistic subtleties and peculiar speech patterns within concise textual data. The model conceptualizes anomaly detection through a binary classification lens. 
-
-	<br>Performance evaluation is conducted leveraging four publicly accessible datasets: Davidson, SemEval-2019 (Task-5, Subtask-A), HASOC-2019 (Sub-task B), and Stormfront. The implementation harnesses Python as primary programming language and employs PyTorch, TensorFlow, NumPy, and Scikit-Transformers as pivotal frameworks for computation and visualization.
-	</p>	
-
-	<p>
-		<li><strong> Hate Speech Detection: Binary vs One Class-V1</strong>
-
-		  <br>I conduct extensive experimentation involving hate speech detection models and identify a prevalent issue in existing models—a tendency to treat the problem as a binary detection model despite the dataset's imbalanced nature. Non-hate speeches contribute significantly to the dataset, making hate speech's definition challenging when compared to cyberbullying, racism, and related domains. To address this, I engineer several models, including SVM-based, LSTM-based, and CNN-based models, utilizing fast text word embedding and GloVe word embedding while still framing the problem as binary.
-
-	Subsequently, I devise a novel approach, reframing the problem as the construction of a single-class model focused exclusively on detecting hate speech. The model is exclusively trained on hate class data, leveraging deep-trained features. Performance evaluation is comprehensive, utilizing four publicly accessible datasets: Davidson, SemEval-2019 (Task-5, Subtask-A), HASOC-2019 (Sub-task B), and Stormfront. 
-
-	<br>My implementation predominantly employs MATLAB, leveraging its Deep Learning Toolbox as the primary framework.</p>	  
-		</ol>
+    </div>
 	  </div>
 	  
 
