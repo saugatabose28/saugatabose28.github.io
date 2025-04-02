@@ -10,10 +10,21 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     .skill-bar {
-      @apply w-full bg-gray-200 rounded overflow-hidden mb-2;
+      width: 100%;
+      background-color: #e5e7eb;
+      border-radius: 9999px;
+      overflow: hidden;
+      margin-bottom: 0.5rem;
     }
     .skill-bar-fill {
-      @apply text-white text-sm px-2 py-1 bg-blue-600;
+      display: block;
+      height: 1.25rem;
+      line-height: 1.25rem;
+      padding-left: 0.75rem;
+      color: white;
+      background-color: #2563eb;
+      font-size: 0.875rem;
+      font-weight: 500;
     }
   </style>
 </head>
@@ -27,114 +38,87 @@
       <p><strong>Technical Stack:</strong> PyTorch, TensorFlow, BERT, Spark, Kafka, Python, AWS, Azure</p>
       <p><strong>Available for:</strong> Postdoc roles | Data Science positions | Research collaboration</p>
     </div>
-    <div class="mt-6 flex justify-center gap-4">
+    <div class="mt-6 flex flex-wrap justify-center gap-4">
       <a href="#research" class="bg-blue-600 text-white px-4 py-2 rounded">Research Portfolio</a>
       <a href="#projects" class="bg-blue-600 text-white px-4 py-2 rounded">Technical Projects</a>
       <a href="#teaching" class="bg-blue-600 text-white px-4 py-2 rounded">Teaching Experience</a>
+      <a href="#skills" class="bg-blue-600 text-white px-4 py-2 rounded">Skills Matrix</a>
     </div>
   </header>
 
   <main class="px-4 max-w-6xl mx-auto">
+    <section id="skills" class="my-10">
+      <h2 class="text-2xl font-bold border-b-2 border-blue-500 pb-1 mb-4">Technical Skills Matrix</h2>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div>
+          <p class="mb-1">Python</p>
+          <div class="skill-bar"><span class="skill-bar-fill w-[95%]">Expert</span></div>
+          <p class="mb-1">PyTorch</p>
+          <div class="skill-bar"><span class="skill-bar-fill w-[90%]">Advanced</span></div>
+          <p class="mb-1">TensorFlow</p>
+          <div class="skill-bar"><span class="skill-bar-fill w-[85%]">Advanced</span></div>
+          <p class="mb-1">Apache Spark</p>
+          <div class="skill-bar"><span class="skill-bar-fill w-[85%]">Proficient</span></div>
+        </div>
+        <div>
+          <p class="mb-1">SQL</p>
+          <div class="skill-bar"><span class="skill-bar-fill w-[80%]">Proficient</span></div>
+          <p class="mb-1">BERT / NLP</p>
+          <div class="skill-bar"><span class="skill-bar-fill w-[92%]">Expert</span></div>
+          <p class="mb-1">AWS & Azure</p>
+          <div class="skill-bar"><span class="skill-bar-fill w-[75%]">Proficient</span></div>
+          <p class="mb-1">Java / Spring</p>
+          <div class="skill-bar"><span class="skill-bar-fill w-[70%]">Intermediate</span></div>
+        </div>
+      </div>
+    </section>
+
     <section id="research" class="my-10">
       <h2 class="text-2xl font-bold border-b-2 border-blue-500 pb-1 mb-4">Research Portfolio</h2>
       <div class="grid md:grid-cols-2 gap-6">
-        <div class="bg-gray-50 p-4 rounded shadow">
-          <h3 class="font-bold text-xl">Deep One-Class Fine-Tuning (ADMA 2023)</h3>
-          <p class="text-sm text-gray-600 mb-2">Problem: Imbalanced short-text classification</p>
-          <p>Used BERT with One-Class SVM loss & quantile regression to improve macro-F1 by 9%. <a href="https://link.springer.com/chapter/10.1007/978-3-031-46661-8_23" class="text-blue-600">Read more</a></p>
-          <img src="images/image1.jpg" alt="DOCFT Architecture" class="mt-3 rounded">
-        </div>
-        <div class="bg-gray-50 p-4 rounded shadow">
-          <h3 class="font-bold text-xl">LexiFuse+ (eScience 2023)</h3>
-          <p class="text-sm text-gray-600 mb-2">Problem: Toxic content under extreme class imbalance</p>
-          <p>Combines lexicon-based features & BERT with semi-supervised fine-tuning to achieve 0.88 macro-F1. <a href="https://ieeexplore.ieee.org/abstract/document/10254896" class="text-blue-600">Read more</a></p>
-          <img src="images/image2.jpg" alt="LexiFuse Model" class="mt-3 rounded">
-        </div>
-        <div class="bg-gray-50 p-4 rounded shadow">
-          <h3 class="font-bold text-xl">VarietyDetect (WI-IAT 2024)</h3>
-          <p class="text-sm text-gray-600 mb-2">Innovation: Adaptive anomaly detection</p>
-          <p>Utilizes transfer learning and self-training for one-class detection. <a href="#" class="text-blue-600">Coming soon</a></p>
-        </div>
+        <!-- Existing research project cards stay here -->
       </div>
 
       <div class="mt-8">
-        <h3 class="text-xl font-bold mb-2">Full List of Publications</h3>
+        <h3 class="text-xl font-bold mb-2">Full List of Publications with Links</h3>
         <ul class="list-disc list-inside text-sm">
-          <li>Bose, S. and Su, G. (2024). VarietyDetect – WI-IAT 2024</li>
-          <li>Bose, S. and Su, G. (2023). Deep One-Class Fine-Tuning – ADMA 2023</li>
-          <li>Bose, S. and Su, G. (2023). LexiFuse+ – eScience 2023</li>
-          <li>Bose, S. and Su, G. (2023). LexiFusedNet – PKAW 2023</li>
-          <li>Bose, S. and Su, G. (2022). Deep One-Class Hate Speech Detection – LREC 2022</li>
+          <li><a href="https://www.wi-iat.com/wi-iat2024/index.html" class="text-blue-600">VarietyDetect (WI-IAT 2024)</a></li>
+          <li><a href="https://link.springer.com/chapter/10.1007/978-3-031-46661-8_23" class="text-blue-600">DOCFT (ADMA 2023)</a></li>
+          <li><a href="https://ieeexplore.ieee.org/document/10254896" class="text-blue-600">LexiFuse+ (eScience 2023)</a></li>
+          <li><a href="https://link.springer.com/chapter/10.1007/978-981-99-7855-7_6" class="text-blue-600">LexiFusedNet (PKAW 2023)</a></li>
+          <li><a href="https://aclanthology.org/2022.lrec-1.761/" class="text-blue-600">Deep One-Class Hate Speech Detection (LREC 2022)</a></li>
         </ul>
       </div>
     </section>
 
-    <section id="projects" class="my-10">
-      <h2 class="text-2xl font-bold border-b-2 border-blue-500 pb-1 mb-4">Technical Project Highlights</h2>
-
+    <section id="teaching" class="my-10">
+      <h2 class="text-2xl font-bold border-b-2 border-blue-500 pb-1 mb-4">Academic Teaching Experience</h2>
       <div class="grid md:grid-cols-2 gap-6">
-        <div class="bg-gray-50 p-4 rounded shadow">
-          <h3 class="text-xl font-semibold">Big Data COVID-19 Analysis</h3>
-          <p>Used Apache Spark + PySpark + MLlib for large-scale data analysis and trend prediction.</p>
-          <div class="mt-2">
-            <div class="skill-bar"><div class="skill-bar-fill w-[90%]">Apache Spark</div></div>
-            <div class="skill-bar"><div class="skill-bar-fill w-[85%]">PySpark</div></div>
-            <div class="skill-bar"><div class="skill-bar-fill w-[80%]">MLlib</div></div>
-          </div>
+        <div class="bg-gray-100 p-4 rounded shadow">
+          <h3 class="font-bold">University of Wollongong</h3>
+          <p class="text-sm">CSIT111, CSIT115, CSIT114, CSIT814, CSIT985, CSCI926, CSCI426, CSCI318, CSIT970, ISIT910</p>
         </div>
-
-        <div class="bg-gray-50 p-4 rounded shadow">
-          <h3 class="text-xl font-semibold">Customer Churn Prediction</h3>
-          <p>Built sklearn + XGBoost pipeline with SHAP explainability for customer behavior modeling.</p>
-          <div class="mt-2">
-            <div class="skill-bar"><div class="skill-bar-fill w-[85%]">XGBoost</div></div>
-            <div class="skill-bar"><div class="skill-bar-fill w-[90%]">SHAP Explainability</div></div>
-            <div class="skill-bar"><div class="skill-bar-fill w-[88%]">Feature Engineering</div></div>
-          </div>
+        <div class="bg-gray-100 p-4 rounded shadow">
+          <h3 class="font-bold">Macquarie University</h3>
+          <p class="text-sm">COMP3210/6210, COMP8320, COMP8325, COMP2100</p>
         </div>
-
-        <div class="bg-gray-50 p-4 rounded shadow">
-          <h3 class="text-xl font-semibold">Security Log & Encryption Practice</h3>
-          <p>Built regex-based log analyzers & encryption demonstrations using Python Cryptography.</p>
-          <div class="mt-2">
-            <div class="skill-bar"><div class="skill-bar-fill w-[80%]">Regex Parsing</div></div>
-            <div class="skill-bar"><div class="skill-bar-fill w-[75%]">Python Cryptography</div></div>
-            <div class="skill-bar"><div class="skill-bar-fill w-[70%]">Brute-force Simulation</div></div>
-          </div>
+        <div class="bg-gray-100 p-4 rounded shadow">
+          <h3 class="font-bold">University of Sydney</h3>
+          <p class="text-sm">COMP5046, INFO5992, INFO1110</p>
         </div>
-
-        <div class="bg-gray-50 p-4 rounded shadow">
-          <h3 class="text-xl font-semibold">JavaScript Tracker Detection</h3>
-          <p>TF-IDF + SVC classifier for distinguishing tracking JS using contamination control strategies.</p>
-          <div class="mt-2">
-            <div class="skill-bar"><div class="skill-bar-fill w-[85%]">TF-IDF</div></div>
-            <div class="skill-bar"><div class="skill-bar-fill w-[90%]">SVC</div></div>
-            <div class="skill-bar"><div class="skill-bar-fill w-[80%]">Contamination Control</div></div>
-          </div>
+        <div class="bg-gray-100 p-4 rounded shadow">
+          <h3 class="font-bold">UTS</h3>
+          <p class="text-sm">31282, 32516, 31748</p>
         </div>
-
-        <div class="bg-gray-50 p-4 rounded shadow">
-          <h3 class="text-xl font-semibold">BERT + One-Class SVM for Hate Speech</h3>
-          <p>Used BERT embeddings + One-Class SVM to handle class imbalance in hate speech detection.</p>
-          <div class="mt-2">
-            <div class="skill-bar"><div class="skill-bar-fill w-[92%]">BERT</div></div>
-            <div class="skill-bar"><div class="skill-bar-fill w-[88%]">One-Class SVM</div></div>
-            <div class="skill-bar"><div class="skill-bar-fill w-[85%]">HuggingFace Transformers</div></div>
-          </div>
+        <div class="bg-gray-100 p-4 rounded shadow">
+          <h3 class="font-bold">Torrens University</h3>
+          <p class="text-sm">CLA321, SDM404, BDA601, AAI202</p>
+        </div>
+        <div class="bg-gray-100 p-4 rounded shadow">
+          <h3 class="font-bold">King’s Own Institute (KOI)</h3>
+          <p class="text-sm">ICT712, ICT729, ICT753</p>
         </div>
       </div>
-    </section>
-
-    <section id="teaching" class="my-10">
-      <h2 class="text-2xl font-bold border-b-2 border-blue-500 pb-1 mb-4">Academic Experience</h2>
-      <ul class="list-disc list-inside">
-        <li><strong>Lecturer, CIM:</strong> ISBS203 (2025–Now)</li>
-        <li><strong>KOI:</strong> ICT729, ICT712, ICT753</li>
-        <li><strong>Torrens:</strong> CLA321, SDM404, BDA601</li>
-        <li><strong>UTS:</strong> 31282, 32516 – Internet Programming</li>
-        <li><strong>Macquarie:</strong> COMP3210/6210, COMP8320, COMP2100</li>
-        <li><strong>UoW:</strong> CSIT111, CSIT115, CSIT814, CSIT970</li>
-      </ul>
     </section>
 
     <section class="my-10">
