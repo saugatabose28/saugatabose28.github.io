@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,117 +8,145 @@
   <meta name="author" content="Saugata Bose">
   <title>Saugata Bose - AI/ML Researcher & Lecturer</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .skill-bar {
+      @apply w-full bg-gray-200 rounded overflow-hidden mb-2;
+    }
+    .skill-bar-fill {
+      @apply text-white text-sm px-2 py-1 bg-blue-600;
+    }
+  </style>
 </head>
-
-<body class="bg-gray-50 text-gray-800">
-  <header class="text-center p-6 bg-white shadow">
-    <img src="images/sb.jpg" alt="Saugata Bose" class="mx-auto rounded-full w-36 h-36">
+<body class="bg-white text-gray-800 font-sans">
+  <header class="text-center py-10 bg-gray-100">
+    <img src="images/sb.jpg" alt="Saugata Bose" class="w-40 h-40 mx-auto rounded-full">
     <h1 class="text-3xl font-bold mt-4">Saugata Bose, PhD</h1>
-    <p class="text-gray-600">Lecturer | AI/ML Researcher | NLP & Big Data Specialist</p>
-    <div class="mt-4 bg-blue-50 border-l-4 border-blue-500 p-4">
+    <p class="text-lg">Lecturer | AI/ML Researcher | NLP & Big Data Specialist</p>
+    <div class="bg-blue-100 text-blue-800 p-4 mt-6 rounded-md max-w-xl mx-auto">
       <p><strong>Quick Summary:</strong> PhD from University of Wollongong, expert in short-text classification, anomaly detection, one-class modeling, cloud AI systems.</p>
       <p><strong>Technical Stack:</strong> PyTorch, TensorFlow, BERT, Spark, Kafka, Python, AWS, Azure</p>
       <p><strong>Available for:</strong> Postdoc roles | Data Science positions | Research collaboration</p>
     </div>
-    <div class="mt-4 flex justify-center gap-4">
-      <a href="#research" class="bg-blue-600 hover:bg-blue-800 text-white py-2 px-4 rounded">Research Portfolio</a>
-      <a href="#projects" class="bg-blue-600 hover:bg-blue-800 text-white py-2 px-4 rounded">Technical Projects</a>
-      <a href="#teaching" class="bg-blue-600 hover:bg-blue-800 text-white py-2 px-4 rounded">Teaching Experience</a>
+    <div class="mt-6 flex justify-center gap-4">
+      <a href="#research" class="bg-blue-600 text-white px-4 py-2 rounded">Research Portfolio</a>
+      <a href="#projects" class="bg-blue-600 text-white px-4 py-2 rounded">Technical Projects</a>
+      <a href="#teaching" class="bg-blue-600 text-white px-4 py-2 rounded">Teaching Experience</a>
     </div>
   </header>
 
-  <main class="px-4 md:px-20 py-8">
-    <section id="research">
-      <h2 class="text-2xl font-semibold border-b pb-2 mb-4">Research Highlights</h2>
-      <div class="grid md:grid-cols-3 gap-6">
-        <div class="bg-white shadow p-4 rounded">
-          <h3 class="text-lg font-bold">DOCFT (ADMA 2023)</h3>
-          <p><strong>Problem:</strong> Imbalanced short-text classification</p>
-          <p><strong>Solution:</strong> BERT + One-Class SVM loss + quantile regression</p>
-          <p><strong>Performance:</strong> +9% macro-F1</p>
-          <a href="https://link.springer.com/chapter/10.1007/978-3-031-46661-8_23" class="text-blue-600 underline">View Paper</a>
+  <main class="px-4 max-w-6xl mx-auto">
+    <section id="research" class="my-10">
+      <h2 class="text-2xl font-bold border-b-2 border-blue-500 pb-1 mb-4">Research Portfolio</h2>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-gray-50 p-4 rounded shadow">
+          <h3 class="font-bold text-xl">Deep One-Class Fine-Tuning (ADMA 2023)</h3>
+          <p class="text-sm text-gray-600 mb-2">Problem: Imbalanced short-text classification</p>
+          <p>Used BERT with One-Class SVM loss & quantile regression to improve macro-F1 by 9%. <a href="https://link.springer.com/chapter/10.1007/978-3-031-46661-8_23" class="text-blue-600">Read more</a></p>
+          <img src="images/image1.jpg" alt="DOCFT Architecture" class="mt-3 rounded">
         </div>
-        <div class="bg-white shadow p-4 rounded">
-          <h3 class="text-lg font-bold">LexiFuse+ (eScience 2023)</h3>
-          <p><strong>Problem:</strong> Weak signal in toxic content</p>
-          <p><strong>Solution:</strong> BERT + Lexicon + semi-supervised loss</p>
-          <p><strong>Performance:</strong> 0.89 macro-F1</p>
-          <a href="https://ieeexplore.ieee.org/abstract/document/10254896" class="text-blue-600 underline">View Paper</a>
+        <div class="bg-gray-50 p-4 rounded shadow">
+          <h3 class="font-bold text-xl">LexiFuse+ (eScience 2023)</h3>
+          <p class="text-sm text-gray-600 mb-2">Problem: Toxic content under extreme class imbalance</p>
+          <p>Combines lexicon-based features & BERT with semi-supervised fine-tuning to achieve 0.88 macro-F1. <a href="https://ieeexplore.ieee.org/abstract/document/10254896" class="text-blue-600">Read more</a></p>
+          <img src="images/image2.jpg" alt="LexiFuse Model" class="mt-3 rounded">
         </div>
-        <div class="bg-white shadow p-4 rounded">
-          <h3 class="text-lg font-bold">VarietyDetect (WI-IAT 2024)</h3>
-          <p><strong>Innovation:</strong> Adaptive anomaly detection using self-training + transfer learning</p>
-          <a href="#" class="text-blue-600 underline">Coming soon</a>
+        <div class="bg-gray-50 p-4 rounded shadow">
+          <h3 class="font-bold text-xl">VarietyDetect (WI-IAT 2024)</h3>
+          <p class="text-sm text-gray-600 mb-2">Innovation: Adaptive anomaly detection</p>
+          <p>Utilizes transfer learning and self-training for one-class detection. <a href="#" class="text-blue-600">Coming soon</a></p>
+        </div>
+      </div>
+
+      <div class="mt-8">
+        <h3 class="text-xl font-bold mb-2">Full List of Publications</h3>
+        <ul class="list-disc list-inside text-sm">
+          <li>Bose, S. and Su, G. (2024). VarietyDetect – WI-IAT 2024</li>
+          <li>Bose, S. and Su, G. (2023). Deep One-Class Fine-Tuning – ADMA 2023</li>
+          <li>Bose, S. and Su, G. (2023). LexiFuse+ – eScience 2023</li>
+          <li>Bose, S. and Su, G. (2023). LexiFusedNet – PKAW 2023</li>
+          <li>Bose, S. and Su, G. (2022). Deep One-Class Hate Speech Detection – LREC 2022</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="projects" class="my-10">
+      <h2 class="text-2xl font-bold border-b-2 border-blue-500 pb-1 mb-4">Technical Project Highlights</h2>
+
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-gray-50 p-4 rounded shadow">
+          <h3 class="text-xl font-semibold">Big Data COVID-19 Analysis</h3>
+          <p>Used Apache Spark + PySpark + MLlib for large-scale data analysis and trend prediction.</p>
+          <div class="mt-2">
+            <div class="skill-bar"><div class="skill-bar-fill w-[90%]">Apache Spark</div></div>
+            <div class="skill-bar"><div class="skill-bar-fill w-[85%]">PySpark</div></div>
+            <div class="skill-bar"><div class="skill-bar-fill w-[80%]">MLlib</div></div>
+          </div>
+        </div>
+
+        <div class="bg-gray-50 p-4 rounded shadow">
+          <h3 class="text-xl font-semibold">Customer Churn Prediction</h3>
+          <p>Built sklearn + XGBoost pipeline with SHAP explainability for customer behavior modeling.</p>
+          <div class="mt-2">
+            <div class="skill-bar"><div class="skill-bar-fill w-[85%]">XGBoost</div></div>
+            <div class="skill-bar"><div class="skill-bar-fill w-[90%]">SHAP Explainability</div></div>
+            <div class="skill-bar"><div class="skill-bar-fill w-[88%]">Feature Engineering</div></div>
+          </div>
+        </div>
+
+        <div class="bg-gray-50 p-4 rounded shadow">
+          <h3 class="text-xl font-semibold">Security Log & Encryption Practice</h3>
+          <p>Built regex-based log analyzers & encryption demonstrations using Python Cryptography.</p>
+          <div class="mt-2">
+            <div class="skill-bar"><div class="skill-bar-fill w-[80%]">Regex Parsing</div></div>
+            <div class="skill-bar"><div class="skill-bar-fill w-[75%]">Python Cryptography</div></div>
+            <div class="skill-bar"><div class="skill-bar-fill w-[70%]">Brute-force Simulation</div></div>
+          </div>
+        </div>
+
+        <div class="bg-gray-50 p-4 rounded shadow">
+          <h3 class="text-xl font-semibold">JavaScript Tracker Detection</h3>
+          <p>TF-IDF + SVC classifier for distinguishing tracking JS using contamination control strategies.</p>
+          <div class="mt-2">
+            <div class="skill-bar"><div class="skill-bar-fill w-[85%]">TF-IDF</div></div>
+            <div class="skill-bar"><div class="skill-bar-fill w-[90%]">SVC</div></div>
+            <div class="skill-bar"><div class="skill-bar-fill w-[80%]">Contamination Control</div></div>
+          </div>
+        </div>
+
+        <div class="bg-gray-50 p-4 rounded shadow">
+          <h3 class="text-xl font-semibold">BERT + One-Class SVM for Hate Speech</h3>
+          <p>Used BERT embeddings + One-Class SVM to handle class imbalance in hate speech detection.</p>
+          <div class="mt-2">
+            <div class="skill-bar"><div class="skill-bar-fill w-[92%]">BERT</div></div>
+            <div class="skill-bar"><div class="skill-bar-fill w-[88%]">One-Class SVM</div></div>
+            <div class="skill-bar"><div class="skill-bar-fill w-[85%]">HuggingFace Transformers</div></div>
+          </div>
         </div>
       </div>
     </section>
 
-    <section id="projects" class="mt-12">
-      <h2 class="text-2xl font-semibold border-b pb-2 mb-4">Technical Project Highlights</h2>
-      <div class="space-y-8">
-        <div class="bg-white shadow p-6 rounded">
-          <h3 class="text-xl font-semibold mb-2"><a href="https://github.com/saugatabose28/BigData-COVID19-Analysis" class="text-blue-600 underline">Big Data COVID-19 Analysis</a></h3>
-          <p class="mb-2">Apache Spark with PySpark to analyze large-scale COVID-19 datasets using MLlib. Techniques: distributed aggregation, logistic regression, KMeans.</p>
-          <div class="space-y-1">
-            <div class="bg-gray-200 rounded overflow-hidden"><div class="bg-green-600 text-white text-sm px-2 py-1" style="width: 90%">Apache Spark & Big Data: 90%</div></div>
-            <div class="bg-gray-200 rounded overflow-hidden"><div class="bg-green-600 text-white text-sm px-2 py-1" style="width: 80%">MLlib & Clustering: 80%</div></div>
-          </div>
-        </div>
-
-        <div class="bg-white shadow p-6 rounded">
-          <h3 class="text-xl font-semibold mb-2"><a href="https://github.com/saugatabose28/Customer-Churn-Prediction-BigData" class="text-blue-600 underline">Customer Churn Prediction</a></h3>
-          <p class="mb-2">ML pipeline using pandas, sklearn, XGBoost. Feature engineering, explainability with SHAP.</p>
-          <div class="space-y-1">
-            <div class="bg-gray-200 rounded overflow-hidden"><div class="bg-green-600 text-white text-sm px-2 py-1" style="width: 85%">Python Programming: 85%</div></div>
-            <div class="bg-gray-200 rounded overflow-hidden"><div class="bg-green-600 text-white text-sm px-2 py-1" style="width: 78%">Model Explainability (SHAP): 78%</div></div>
-          </div>
-        </div>
-
-        <div class="bg-white shadow p-6 rounded">
-          <h3 class="text-xl font-semibold mb-2"><a href="https://github.com/saugatabose28/Security-Essential-Practices" class="text-blue-600 underline">Security Log Analysis & Encryption Practice</a></h3>
-          <p class="mb-2">Regex log parsing, error tracking, encryption via Fernet, hash cracking demo.</p>
-          <div class="space-y-1">
-            <div class="bg-gray-200 rounded overflow-hidden"><div class="bg-green-600 text-white text-sm px-2 py-1" style="width: 80%">Regex + Python Scripting: 80%</div></div>
-            <div class="bg-gray-200 rounded overflow-hidden"><div class="bg-green-600 text-white text-sm px-2 py-1" style="width: 70%">Encryption & Hashing: 70%</div></div>
-          </div>
-        </div>
-
-        <div class="bg-white shadow p-6 rounded">
-          <h3 class="text-xl font-semibold mb-2"><a href="https://github.com/saugatabose28/Machine-Learning-in-Cyber-Attack-Detection/tree/main" class="text-blue-600 underline">TF-IDF Based JavaScript Tracker Detection</a></h3>
-          <p class="mb-2">TF-IDF feature extraction with SVC, One-Class SVM, achieving 99.7% AUC.</p>
-          <div class="space-y-1">
-            <div class="bg-gray-200 rounded overflow-hidden"><div class="bg-green-600 text-white text-sm px-2 py-1" style="width: 88%">Anomaly Detection (OC-SVM): 88%</div></div>
-            <div class="bg-gray-200 rounded overflow-hidden"><div class="bg-green-600 text-white text-sm px-2 py-1" style="width: 75%">TF-IDF & Text Processing: 75%</div></div>
-          </div>
-        </div>
-
-        <div class="bg-white shadow p-6 rounded">
-          <h3 class="text-xl font-semibold mb-2"><a href="https://github.com/saugatabose28/Hate-Speech-Detection/blob/master/bertBILstm.ipynb" class="text-blue-600 underline">Short Text Classification with BERT + One-Class SVM</a></h3>
-          <p class="mb-2">Combined BERT embeddings with OC-SVM for hate speech classification on imbalanced datasets.</p>
-          <div class="space-y-1">
-            <div class="bg-gray-200 rounded overflow-hidden"><div class="bg-green-600 text-white text-sm px-2 py-1" style="width: 90%">NLP + Transformers (BERT): 90%</div></div>
-            <div class="bg-gray-200 rounded overflow-hidden"><div class="bg-green-600 text-white text-sm px-2 py-1" style="width: 85%">Anomaly Detection (OC-SVM): 85%</div></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="teaching" class="mt-12">
-      <h2 class="text-2xl font-semibold border-b pb-2 mb-4">Academic Experience</h2>
-      <ul class="list-disc list-inside space-y-2">
-        <li><strong>CIM (Lecturer):</strong> ISBS203</li>
+    <section id="teaching" class="my-10">
+      <h2 class="text-2xl font-bold border-b-2 border-blue-500 pb-1 mb-4">Academic Experience</h2>
+      <ul class="list-disc list-inside">
+        <li><strong>Lecturer, CIM:</strong> ISBS203 (2025–Now)</li>
         <li><strong>KOI:</strong> ICT729, ICT712, ICT753</li>
         <li><strong>Torrens:</strong> CLA321, SDM404, BDA601</li>
-        <li><strong>UTS:</strong> 31282, 32516, 31748</li>
+        <li><strong>UTS:</strong> 31282, 32516 – Internet Programming</li>
         <li><strong>Macquarie:</strong> COMP3210/6210, COMP8320, COMP2100</li>
-        <li><strong>UoW:</strong> CSIT111, CSIT114/814, CSIT115, CSIT985, CSIT970, CSCI926/426, CSCI318</li>
+        <li><strong>UoW:</strong> CSIT111, CSIT115, CSIT814, CSIT970</li>
       </ul>
+    </section>
+
+    <section class="my-10">
+      <h2 class="text-2xl font-bold border-b-2 border-blue-500 pb-1 mb-4">Contact</h2>
+      <p>Email: <a href="mailto:sbose@uow.edu.au" class="text-blue-600">sbose@uow.edu.au</a><br>
+      LinkedIn: <a href="https://linkedin.com/in/saugata28" class="text-blue-600">linkedin.com/in/saugata28</a><br>
+      GitHub: <a href="https://github.com/saugatabose28" class="text-blue-600">github.com/saugatabose28</a></p>
     </section>
   </main>
 
-  <footer class="text-center p-4 text-sm text-gray-600 border-t mt-12">
+  <footer class="text-center text-sm text-gray-600 py-6 border-t">
     &copy; 2025 Saugata Bose. Last updated April 2025.
   </footer>
 </body>
-
 </html>
