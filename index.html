@@ -44,6 +44,13 @@
 
 	  
 	<style>
+		/* Force the next element to start on a fresh line below floats,
+		   flex rows, grid tracks, columns – everything.                 */
+		.section-break{
+			clear: both;      /* clears floats          */
+			display: block;
+			height: 0;        /* no visible height      */
+		}
 
 		/* right‑align the wrapper so the link hugs the end of the row */
 		.project-more-wrap{
@@ -561,7 +568,9 @@
 		  </div>	  
 
 		</div>
-				<!-- Link to full GitHub repo list -->
+		
+</div>
+		<!-- Link to full GitHub repo list -->
 		<div class="project-more-wrap">
 		  <a href="https://github.com/saugatabose28?tab=repositories"
 			 target="_blank"
@@ -569,7 +578,6 @@
 			 Other&nbsp;Projects&nbsp;→
 		  </a>
 		</div>
-</div>
 	  </div>
 
 
