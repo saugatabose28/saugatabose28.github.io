@@ -44,51 +44,35 @@
 
 	  
 	<style>
+	/* ===== Professional Experience masonry columns ===== */
+	.exp-grid{
+		column-gap:20px;          /* horizontal gap between columns   */
+		column-count:1;           /* mobile default                   */
+		margin-top:10px;
+	}
 
-		/* right‑align the wrapper so the link hugs the end of the row */
-		.project-more-wrap{
-			text-align:right;     /* pushes content to the far right */
-			margin-top:18px;
-		}
+	/* ≥768 px → two masonry columns */
+	@media (min-width:768px){
+		.exp-grid{column-count:2;}
+	}
 
-		/* style of the link itself (keep if already added) */
-		.project-more{
-			font-weight:bold;
-			color:#0067c5;
-			text-decoration:none;
-			font-size:1.05em;
-		}
-		.project-more:hover{ text-decoration:underline; }
-	
-		/* ===== Professional Experience masonry columns ===== */
-		.exp-grid{
-			column-gap:20px;          /* horizontal gap between columns   */
-			column-count:1;           /* mobile default                   */
-			margin-top:10px;
-		}
+	/* ≥1200 px → three masonry columns */
+	@media (min-width:1200px){
+		.exp-grid{column-count:3;}
+	}
 
-		/* ≥768 px → two masonry columns */
-		@media (min-width:768px){
-			.exp-grid{column-count:2;}
-		}
+	/* Card – avoid breaking inside columns */
+	.exp-card{
+		break-inside:avoid;
+		margin-bottom:20px;       /* vertical gap between cards       */
+		background:#fafafa;
+		border:1px solid #ddd;
+		border-radius:6px;
+		padding:18px 22px;
+	}
 
-		/* ≥1200 px → three masonry columns */
-		@media (min-width:1200px){
-			.exp-grid{column-count:3;}
-		}
-
-		/* Card – avoid breaking inside columns */
-		.exp-card{
-			break-inside:avoid;
-			margin-bottom:20px;       /* vertical gap between cards       */
-			background:#fafafa;
-			border:1px solid #ddd;
-			border-radius:6px;
-			padding:18px 22px;
-		}
-
-		.exp-card h3{margin:0 0 6px;font-size:1.1em}
-		.exp-card ul{margin:6px 0 0 18px}
+	.exp-card h3{margin:0 0 6px;font-size:1.1em}
+	.exp-card ul{margin:6px 0 0 18px}
 
 
 	/* Top right fixed logo (all screens) */
@@ -522,47 +506,45 @@
 	   <h2>Technical Project Highlights</h2>
 	   <div class="projects-grid">
 
-		  <div class="project-card">
-			<h3><a style="color: #003366; text-decoration: underline;" href="https://github.com/saugatabose28/BigData-COVID19-Analysis">Big Data COVID-19 Analysis</a></h3>
-			<p>Apache Spark with PySpark to analyze large-scale COVID-19 datasets using MLlib. Techniques: distributed aggregation, logistic regression, KMeans.</p>
-			<div class="skill-bar"><span class="skill-bar-fill" style="width:90%">PySpark </span></div>
-			<div class="skill-bar"><span class="skill-bar-fill" style="width:85%">MLlib </span></div>
-		  </div>
+      <div class="project-card">
+        <h3><a style="color: #003366; text-decoration: underline;" href="https://github.com/saugatabose28/BigData-COVID19-Analysis">Big Data COVID-19 Analysis</a></h3>
+        <p>Apache Spark with PySpark to analyze large-scale COVID-19 datasets using MLlib. Techniques: distributed aggregation, logistic regression, KMeans.</p>
+		<div class="skill-bar"><span class="skill-bar-fill" style="width:90%">PySpark </span></div>
+		<div class="skill-bar"><span class="skill-bar-fill" style="width:85%">MLlib </span></div>
+      </div>
 
-		  <div class="project-card">
-			<h3><a style="color: #003366; text-decoration: underline;" href="https://github.com/saugatabose28/Customer-Churn-Prediction-BigData">Customer Churn Prediction</a></h3>
-			<p>ML pipeline using pandas, sklearn, XGBoost. Feature engineering, explainability with SHAP.</p>
-			<div class="skill-bar"><span class="skill-bar-fill" style="width:85%">XGBoost</span></div>
-			<div class="skill-bar"><span class="skill-bar-fill" style="width:90%">SHAP Explainability</span></div>
-			<div class="skill-bar"><span class="skill-bar-fill" style="width:88%">Feature Engineering</span></div>
-		  </div>
+      <div class="project-card">
+        <h3><a style="color: #003366; text-decoration: underline;" href="https://github.com/saugatabose28/Customer-Churn-Prediction-BigData">Customer Churn Prediction</a></h3>
+        <p>ML pipeline using pandas, sklearn, XGBoost. Feature engineering, explainability with SHAP.</p>
+		<div class="skill-bar"><span class="skill-bar-fill" style="width:85%">XGBoost</span></div>
+		<div class="skill-bar"><span class="skill-bar-fill" style="width:90%">SHAP Explainability</span></div>
+		<div class="skill-bar"><span class="skill-bar-fill" style="width:88%">Feature Engineering</span></div>
+      </div>
 
-		  <div class="project-card">
-			<h3><a style="color: #003366; text-decoration: underline;" href="https://github.com/saugatabose28/Security-Essential-Practices">Security Log Analysis & Encryption Practice</a></h3>
-			<p>Regex log parsing, error tracking, encryption via Fernet, hash cracking demo.</p>
-			<div class="skill-bar"><span class="skill-bar-fill" style="width:80%">Regex Parsing</span></div>
-			<div class="skill-bar"><span class="skill-bar-fill" style="width:75%">Python Cryptography</span></div>
-		  </div>
+      <div class="project-card">
+        <h3><a style="color: #003366; text-decoration: underline;" href="https://github.com/saugatabose28/Security-Essential-Practices">Security Log Analysis & Encryption Practice</a></h3>
+        <p>Regex log parsing, error tracking, encryption via Fernet, hash cracking demo.</p>
+		<div class="skill-bar"><span class="skill-bar-fill" style="width:80%">Regex Parsing</span></div>
+		<div class="skill-bar"><span class="skill-bar-fill" style="width:75%">Python Cryptography</span></div>
+      </div>
 
-		  <div class="project-card">
-			<h3><a style="color: #003366; text-decoration: underline;" href="https://github.com/saugatabose28/Machine-Learning-in-Cyber-Attack-Detection/tree/main">TF-IDF Based JavaScript Tracker Detection</a></h3>
-			<p>TF-IDF feature extraction with SVC, One-Class SVM, achieving 99.7% AUC.</p>
-			<div class="skill-bar"><span class="skill-bar-fill" style="width:85%">TF-IDF</span></div>
-			<div class="skill-bar"><span class="skill-bar-fill" style="width:90%">SVC</span></div>
-		  </div>
+      <div class="project-card">
+        <h3><a style="color: #003366; text-decoration: underline;" href="https://github.com/saugatabose28/Machine-Learning-in-Cyber-Attack-Detection/tree/main">TF-IDF Based JavaScript Tracker Detection</a></h3>
+        <p>TF-IDF feature extraction with SVC, One-Class SVM, achieving 99.7% AUC.</p>
+		<div class="skill-bar"><span class="skill-bar-fill" style="width:85%">TF-IDF</span></div>
+		<div class="skill-bar"><span class="skill-bar-fill" style="width:90%">SVC</span></div>
+      </div>
 
-		  <div class="project-card">
-			<h3><a style="color: #003366; text-decoration: underline;" href="https://github.com/saugatabose28/Hate-Speech-Detection/blob/master/bertBILstm.ipynb">Short Text Classification with BERT + One-Class SVM</a></h3>
-			<p>Combined BERT embeddings with OC-SVM for hate speech classification on imbalanced datasets.</p>
-			<div class="skill-bar"><span class="skill-bar-fill" style="width:85%">HuggingFace Transformers</span></div>
-			<div class="skill-bar"><span class="skill-bar-fill" style="width:90%">Model Optimization</span></div>
-			<div class="skill-bar"><span class="skill-bar-fill" style="width:90%">Matlab</span></div>
-			
-		  </div>	  
+      <div class="project-card">
+        <h3><a style="color: #003366; text-decoration: underline;" href="https://github.com/saugatabose28/Hate-Speech-Detection/blob/master/bertBILstm.ipynb">Short Text Classification with BERT + One-Class SVM</a></h3>
+        <p>Combined BERT embeddings with OC-SVM for hate speech classification on imbalanced datasets.</p>
+		<div class="skill-bar"><span class="skill-bar-fill" style="width:85%">HuggingFace Transformers</span></div>
+		<div class="skill-bar"><span class="skill-bar-fill" style="width:90%">Model Optimization</span></div>
+		<div class="skill-bar"><span class="skill-bar-fill" style="width:90%">Matlab</span></div>
+		
+      </div>
 
-		</div>
-
-</div>
+    </div>
 	  </div>
 
 
