@@ -283,29 +283,23 @@
 			width: 100%;
 		}
 		
-		/* Fixed top‑right logo */
+		/* Top‑right logo */
 		#ael-logo {
 			position: fixed;
-			top: 8px;            /* distance from the top edge */
-			right: 8px;          /* distance from the right edge */
-			width: 110px;        /* adjust size as needed */
+			top: 8px;
+			right: 8px;
+			width: 110px;      /* tweak to 90‑120px as you prefer */
 			height: auto;
-			z-index: 9999;       /* above all other elements */
-			transition: opacity 0.3s ease;
+			z-index: 9999;
+			transition: opacity 0.2s ease;
 		}
+		#ael-logo:hover { opacity: 0.85; }
 
-		#ael-logo:hover {
-			opacity: 0.85;       /* subtle feedback on hover */
-		}
-
-		/* Optional: shrink logo on narrow screens */
+		/* Optional: shrink further on small screens */
 		@media (max-width: 600px) {
-			#ael-logo {
-				width: 80px;
-				top: 6px;
-				right: 6px;
-			}
+			#ael-logo { width: 80px; top: 6px; right: 6px; }
 		}
+
 
 	}
 
@@ -315,7 +309,7 @@
 	<body class="w3-content" style="margin:0;max-width:100%">
 	
 	<img id="ael-logo"
-     src="images/logo3.png"
+     src="images/logo3_1.png"
      alt="Analytics Edge Learning logo">
 
 	<amp-auto-ads type="adsense"
