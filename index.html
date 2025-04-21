@@ -44,13 +44,6 @@
 
 	  
 	<style>
-		/* Force the next element to start on a fresh line below floats,
-		   flex rows, grid tracks, columns – everything.                 */
-		.section-break{
-			clear: both;      /* clears floats          */
-			display: block;
-			height: 0;        /* no visible height      */
-		}
 
 		/* right‑align the wrapper so the link hugs the end of the row */
 		.project-more-wrap{
@@ -169,19 +162,8 @@
 
 		.w3-sidebar a {font-family: "Roboto", sans-serif}
 		body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
-		.projects-grid{
-    display:flex;
-    flex-wrap:wrap;                 /* cards wrap onto new lines   */
-    gap:20px;                       /* same spacing                */
-}
-
-.project-card{
-    flex:1 1 280px;                 /* grow | shrink | basis       */
-    background:#fafafa;
-    border:1px solid #ddd;
-    border-radius:5px;
-    padding:15px;
-}
+		.projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+		.project-card { background: #fafafa; border: 1px solid #ddd; border-radius: 5px; padding: 15px; }
 		.project-card figure { margin: 0 0 10px; }
 		.project-card img { max-width: 100%; height: auto; border: 1px solid #ccc; border-radius: 3px; }
 		.project-card figcaption { font-size: 0.9em; color: #555; text-align: center; }
@@ -579,20 +561,11 @@
 		  </div>	  
 
 		</div>
-				<!-- Link to full GitHub repo list -->
-		<div class="project-more-wrap">
-		  <a href="https://github.com/saugatabose28?tab=repositories"
-			 target="_blank"
-			 class="project-more">
-			 Other&nbsp;Projects&nbsp;→
-		  </a>
-		</div>
-		
-	</div>
 
+</div>
 	  </div>
 
-<span style="display:block; clear:both;"></span>
+
 
 	 <!-- <div class="w3-container w3-light-grey w3-padding-32" id="service">
 		<h2>Services</h2>
@@ -602,7 +575,7 @@
 		  <p><li> Journal Reviewers of <a href="https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=34">IEEE T-PAMI</a>, <a href="https://www.springer.com/journal/11263">IJCV</a>, <a href="https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=83">IEEE T-IP</a>, <a href="https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=5962385">IEEE T-NNLS</a>, <a href="https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=6046">IEEE T-MM</a>, <a href="https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=69">IEEE T-KDE</a>, etc.</p>
 		  <p><li> Program Committee Members of ICCV 2021, AAAI 2021, ICLR 2021, NeurIPS 2020, ICML 2020, ECCV 2020, CVPR 2020, ICLR 2020, AAAI 2020, ICCV 2019, CVPR 2019, ICLR 2019, AAAI 2019, IJCAI 2018, AAAI 2018, NeurIPS 2018, etc.</p>
 	  </div> -->
-	<span class="section-break"></span>
+
 	  <!-- The Awards Section -->
 	  <div class="w3-container w3-padding-32" id="award">
 		<h2>Awards</h2>
