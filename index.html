@@ -44,6 +44,27 @@
 
 	  
 	<style>
+	/* Top‑right fixed logo (all screens) */
+		#ael-logo {
+			position: fixed;
+			top: 8px;
+			right: 8px;
+			width: 110px;          /* desktop size */
+			height: auto;
+			z-index: 9999;         /* above sidebar & content */
+			transition: opacity 0.2s ease;
+		}
+		#ael-logo:hover { opacity: 0.85; }
+
+		/* Shrink logo on very small screens */
+		@media (max-width: 600px) {
+			#ael-logo {
+				width: 80px;
+				top: 6px;
+				right: 6px;
+			}
+		}
+
 		/* Styles for the right sidebar */
 		#expertiseSidebar {
 		  position: fixed;
@@ -282,35 +303,17 @@
 		.education-content {
 			width: 100%;
 		}
-		
-		/* Top‑right logo */
-		#ael-logo {
-			position: fixed;
-			top: 8px;
-			right: 8px;
-			width: 110px;      /* tweak to 90‑120px as you prefer */
-			height: auto;
-			z-index: 9999;
-			transition: opacity 0.2s ease;
-		}
-		#ael-logo:hover { opacity: 0.85; }
-
-		/* Optional: shrink further on small screens */
-		@media (max-width: 600px) {
-			#ael-logo { width: 80px; top: 6px; right: 6px; }
-		}
-
-
 	}
 
 	</style>
 	</head>
 
 	<body class="w3-content" style="margin:0;max-width:100%">
-	
-	<img id="ael-logo"
-     src="images/logo3_1.png"
-     alt="Analytics Edge Learning logo">
+
+	  <!-- Fixed top‑right logo -->
+	  <img id="ael-logo"
+		   src="images/logo3_1.png"
+		   alt="Analytics Edge Learning logo">
 
 	<amp-auto-ads type="adsense"
 			data-ad-client="ca-pub-8335360976249671">
