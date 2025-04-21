@@ -169,8 +169,19 @@
 
 		.w3-sidebar a {font-family: "Roboto", sans-serif}
 		body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
-		.projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
-		.project-card { background: #fafafa; border: 1px solid #ddd; border-radius: 5px; padding: 15px; }
+		.projects-grid{
+    display:flex;
+    flex-wrap:wrap;                 /* cards wrap onto new lines   */
+    gap:20px;                       /* same spacing                */
+}
+
+.project-card{
+    flex:1 1 280px;                 /* grow | shrink | basis       */
+    background:#fafafa;
+    border:1px solid #ddd;
+    border-radius:5px;
+    padding:15px;
+}
 		.project-card figure { margin: 0 0 10px; }
 		.project-card img { max-width: 100%; height: auto; border: 1px solid #ccc; border-radius: 3px; }
 		.project-card figcaption { font-size: 0.9em; color: #555; text-align: center; }
@@ -578,7 +589,7 @@
 		</div>
 		
 	</div>
-
+<span style="display:block; clear:both;"></span>
 	  </div>
 
 
