@@ -44,6 +44,23 @@
 
 	  
 	<style>
+		/* ===== Professional Experience grid ===== */
+	.exp-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(420px, 1fr)); /* 2 cols on desktop, 1 on mobile */
+		gap: 20px;
+		margin-top: 10px;
+	}
+
+	.exp-card {
+		background: #fafafa;
+		border: 1px solid #ddd;
+		border-radius: 6px;
+		padding: 18px 22px;
+	}
+	.exp-card h3 { margin-top: 0; font-size: 1.1em; }
+	.exp-card ul { margin: 8px 0 0 18px; }
+
 	/* Top right fixed logo (all screens) */
 		#ael-logo {
 			position: fixed;
@@ -538,36 +555,68 @@
 	  </div>
 
 	  <!-- Student Collaboration/Mentoring -->
-	  <div class="w3-container w3-padding-32" id="experience">
-		<h2>Professional Experience </h2>
-		<div class="projects-grid">
-			<div class="project-card">
-				<ul>
-				<li><strong>Founder & AI/ML Consultant, Analytics Edge Learning (2023–Present):</strong> Delivered AI/ML consulting services, including sentiment analysis, churn modeling, and document clustering using NLP, PySpark, and AWS.</li>
-				</ul>
-			</div>
-			<div class="project-card">
-				<ul>
-				<li><strong>Lecturer, Canterbury Institute of Management (CIM) (2025–Present):</strong> ISBS203</li>
-				<li><strong>Lecturer, King's Own Institute (KOI) (2024–2025):</strong> ICT729, ICT712 and ICT753</li>
-				<li><strong>Learning Facilitator, Torrens University (2024–2025):</strong> CLA321, SDM404, BDA601</li>
-				<li><strong>Teaching Academic, UTS (2024–2025):</strong> 31282 - Systems Testing, 32516 - Internet Programming</li>
-				<li><strong>Teaching Academic, University of Sydney (2024–2025):</strong> COMP5046 (NLP), INFO5992, INFO1110</li>
-				<li><strong>Teacher, Macquarie University College(2023–2025):</strong> WCOM1300-Introduction to Cyber Security </li>
-				<li><strong>Teaching Academic, Macquarie University (2022–2025):</strong> COMP3210/6210, COMP8320, COMP2100, COMP8325</li>
-				<li><strong>Teaching Academic, University of Wollongong (2019–2025):</strong> CSIT111, CSIT114/814, CSIT115, CSIT985, CSCI926/426, CSCI318, CSIT970</li>
-				</ul>
-			</div>
-			<!-- Project 2: LexiFusedNet & LexiFuse+ -->
-			<div class="project-card">
-				<h3><strong>Services</strong></h3>
-				<ul>Program Committee Member for ECAI 2024.</ul>
-			</div>
-		
-	  </div>
+	  <!-- ===== Professional Experience ===== -->
+<div class="w3-container w3-padding-32" id="professional">
+  <h2>Professional Experience</h2>
 
-	 
-	  </div>
+  <div class="exp-grid">
+
+    <!-- Founder / Consulting -->
+    <div class="exp-card">
+      <h3>Founder &amp; AI/ML Consultant – <em>Analytics Edge Learning</em> (2023 – Present)</h3>
+      <ul>
+        <li>Designed and deployed sentiment‑analysis &amp; churn‑prediction pipelines (PySpark, Scikit‑learn, AWS).</li>
+        <li>Built NLP‑based document‑clustering solutions for e‑commerce clients.</li>
+        <li>Advised on cloud architecture, ML Ops, and data‑governance best practices.</li>
+
+        <!-- Outreach -->
+        <li><strong>Community Outreach:</strong>
+          <ul style="margin-top:6px;">
+            <li>Mentor, “<em>Code for Good</em>” (Ryde Baptist Church) – guiding high‑school students in coding &amp; digital literacy.</li>
+            <li>Facilitator, “<em>Learn the Technology</em>” – workshops helping seniors adopt modern digital tools.</li>
+          </ul>
+        </li>
+
+        <!-- Charity -->
+        <li><strong>Chandan Bose Memorable Charity Foundation</strong> (Member, 2014 – present) – sponsor two annual scholarships for under‑privileged schoolgirls in honour of my late father.</li>
+      </ul>
+    </div>
+
+    <!-- Full‑time Lecturer -->
+    <div class="exp-card">
+      <h3>Lecturer – Canterbury Institute of Management (CIM) (2025 – Present)</h3>
+      <ul>
+        <li>Lead units: <strong>ISBS203, ISBS202, ISBS204, ISBS301</strong> (Data &amp; AI stream).</li>
+        <li>Redesigned curricula to embed AWS SageMaker labs and secure SDLC practices.</li>
+        <li>Supervise capstone projects applying deep‑learning models to real client data.</li>
+      </ul>
+    </div>
+
+    <!-- Sessional / Part‑time -->
+    <div class="exp-card">
+      <h3>Sessional &amp; Part‑Time Academic (2019 – 2025)</h3>
+      <ul>
+        <li><strong>King’s Own Institute:</strong> ICT729, ICT712, ICT753.</li>
+        <li><strong>Torrens University:</strong> CLA321, SDM404, BDA601.</li>
+        <li><strong>UTS:</strong> 31282 – Systems Testing, 32516 – Internet Programming.</li>
+        <li><strong>University of Sydney:</strong> COMP5046 (NLP), INFO5992, INFO1110.</li>
+        <li><strong>Macquarie University:</strong> COMP3210/6210, COMP8320, COMP2100, COMP8325, WCOM1300.</li>
+        <li><strong>University of Wollongong:</strong> CSIT111, CSIT114/814, CSIT115, CSIT985, CSCI926/426, CSCI318, CSIT970.</li>
+      </ul>
+    </div>
+
+    <!-- Other activities -->
+    <div class="exp-card">
+      <h3>Other Professional Activities</h3>
+      <ul>
+        <li>Program Committee Member – <strong>ECAI 2024, PRICAI 2024</strong>.</li>
+        <li>Reviewer – <strong>LREC, ADMA</strong>.</li>
+        <li>Graduate Member – <strong>ACS</strong> | Member – <strong>IEEE, ELRA</strong>.</li>
+      </ul>
+    </div>
+
+  </div><!-- /exp-grid -->
+</div>
 
 	  <!-- End page content -->
 
