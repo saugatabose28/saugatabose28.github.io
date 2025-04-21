@@ -44,26 +44,36 @@
 
 	  
 	<style>
-		/* ===== Professional Experience grid ===== */
+				/* ===== Professional Experience masonry columns ===== */
 		.exp-grid{
-			display:flex;
-			flex-wrap:wrap;                 /* allow items to flow onto new lines */
-			gap:20px;                       /* same spacing as before */
+			column-gap:20px;          /* horizontal gap between columns   */
+			column-count:1;           /* mobile default                   */
 			margin-top:10px;
 		}
 
-		/* Each card must be at least 340 px wide, but can grow to fill a row */
+		/* ≥768 px → two masonry columns */
+		@media (min-width:768px){
+			.exp-grid{column-count:2;}
+		}
+
+		/* ≥1200 px → three masonry columns */
+		@media (min-width:1200px){
+			.exp-grid{column-count:3;}
+		}
+
+		/* Card – avoid breaking inside columns */
 		.exp-card{
-			flex:1 1 340px;                 /* grow | shrink | basis */
+			break-inside:avoid;
+			margin-bottom:20px;       /* vertical gap between cards       */
 			background:#fafafa;
 			border:1px solid #ddd;
 			border-radius:6px;
 			padding:18px 22px;
 		}
 
-		/* Headings & list spacing */
 		.exp-card h3{margin:0 0 6px;font-size:1.1em}
 		.exp-card ul{margin:6px 0 0 18px}
+
 
 	/* Top right fixed logo (all screens) */
 		#ael-logo {
