@@ -44,15 +44,21 @@
 
 	  
 	<style>
-			.project-more{
+
+		/* right‑align the wrapper so the link hugs the end of the row */
+		.project-more-wrap{
+			text-align:right;     /* pushes content to the far right */
+			margin-top:18px;
+		}
+
+		/* style of the link itself (keep if already added) */
+		.project-more{
 			font-weight:bold;
-			color:#0067c5;         /* deep link blue – adjust if needed */
+			color:#0067c5;
 			text-decoration:none;
 			font-size:1.05em;
 		}
-		.project-more:hover{
-			text-decoration:underline;
-		}
+		.project-more:hover{ text-decoration:underline; }
 	
 		/* ===== Professional Experience masonry columns ===== */
 		.exp-grid{
@@ -556,12 +562,13 @@
 
 		</div>
 				<!-- Link to full GitHub repo list -->
-		<div class="w3-center" style="margin-top:18px;">
-		  <a href="https://github.com/saugatabose28?tab=repositories" 
+		<div class="project-more-wrap">
+		  <a href="https://github.com/saugatabose28?tab=repositories"
 			 target="_blank"
 			 class="project-more">
 			 Other&nbsp;Projects&nbsp;→
 		  </a>
+		</div>
 </div>
 	  </div>
 
