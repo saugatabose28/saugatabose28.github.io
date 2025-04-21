@@ -44,34 +44,22 @@
 
 	  
 	<style>
-				/* ===== Professional Experience grid ===== */
+		/* ===== Professional Experience grid ===== */
 		.exp-grid{
 			display:grid;
 			gap:20px;
-			/* default: single column on very small screens */
-			grid-template-columns:1fr;
+			/* Each card must be at least 340 px wide; the browser then fits as many as will fit.
+			   With 3 cards you’ll get exactly 3 columns, no empty slots.                */
+			grid-template-columns:repeat(auto-fit,minmax(340px,1fr));
 		}
 
-		/* ≥768 px → two columns */
-		@media (min-width:768px){
-			.exp-grid{grid-template-columns:repeat(2,1fr);}
-		}
-
-		/* ≥1200 px → four columns (same row) */
-		@media (min-width:1200px){
-			.exp-grid{grid-template-columns:repeat(4,1fr);}
-		}
-
-		/* Card */
+		/* Card – keeps tight to its content */
 		.exp-card{
-			display:flex;               /* make inner content flex‑column */
-			flex-direction:column;
 			background:#fafafa;
 			border:1px solid #ddd;
 			border-radius:6px;
 			padding:18px 22px;
 		}
-
 		.exp-card h3{margin:0 0 6px;font-size:1.1em}
 		.exp-card ul{margin:6px 0 0 18px}
 
