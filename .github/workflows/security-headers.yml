@@ -1,0 +1,12 @@
+name: Security Headers
+on: [push]
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Add security headers
+      run: |
+        echo "<IfModule mod_headers.c>
+          Header set Content-Security-Policy \"default-src 'self' https: 'unsafe-inline' 'unsafe-eval'\"
+          Header set X-Content-Type-Options \"nosniff\"
+        </IfModule>" > .htaccess

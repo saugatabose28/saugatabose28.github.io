@@ -1,0 +1,4 @@
+<IfModule mod_headers.c>
+  Header set Content-Security-Policy "default-src 'self' https: 'unsafe-inline' 'unsafe-eval'"
+  Header set X-Content-Type-Options "nosniff"
+</IfModule>
