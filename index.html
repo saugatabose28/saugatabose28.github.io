@@ -354,6 +354,31 @@
 			width: 100%;
 		}
 	}
+	/* ---------- MOBILE LAYOUT OVERRIDES ---------- */
+	@media (max-width: 600px) {
+	  /* 1. Keep content full-width when sidebar is hidden   */
+	  .w3-main { margin-left: 0 !important; }
+
+	  /* 2. Make the sidebar slide in from the left           */
+	  #mySidebar {
+		width: 70%;                  /* nice 70 % overlay      */
+		left: 0; right: auto;        /* align to left edge     */
+		display: none;               /* hidden until 'open'    */
+	  }
+	  #mySidebar.w3-show {           /* added by w3_open()     */
+		display: block;
+		position: fixed;
+		top:   0;
+		height: 100vh;
+		overflow-y: auto;
+	  }
+
+	  /* 3. Ensure the overlay mask appears above content     */
+	  #myOverlay { display:none; }
+	  #myOverlay.w3-show {           /* added by w3_open()     */
+		display: block;
+	  }
+	}
 
 	</style>
 	<!-- Add before </head> -->
@@ -361,6 +386,7 @@
 	/* Above-the-fold styles */
 	#ael-logo, #mySidebar, .w3-main { display:block !important; }
 	</style>
+	
 	<link rel="stylesheet" href="w3.css" media="print" onload="this.media='all'">
 	</head>
 	<!-- Google tag (gtag.js) -->
@@ -401,7 +427,7 @@
 	<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
 
 	<!-- Sidebar/menu -->
-	<nav class="w3-sidebar w3-bar-block w3-blue-grey w3-collapse w3-top w3-right" style="z-index:3;width:150px" id="mySidebar" aria-label="Main navigation menu" role="navigation">
+	<nav class="w3-sidebar w3-bar-block w3-blue-grey w3-collapse w3-top w3-right w3-hide-small" style="z-index:3;width:150px" id="mySidebar" aria-label="Main navigation menu" role="navigation">
 	  <div class="w3-container w3-display-container w3-padding-16">
 		<h3><b>Saugata Bose, PhD</b></h3>
 		<!--<h6>Lecturer at CIM | AI/ML Researcher | Python Developer</h6>-->
