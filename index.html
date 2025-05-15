@@ -3,8 +3,8 @@
 
 	<head>
 
-	<script async defer custom-element="amp-auto-ads"
-		src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js">
+	<script async custom-element="amp-auto-ads" 
+			src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js">
 	</script>
 	
 	  <!-- Google Tag Manager -->
@@ -39,6 +39,7 @@
 	  "url": "https://saugatabose28.github.io/",
 	  "image": "https://saugatabose28.github.io/images/sb.jpg",
 	  "jobTitle": "Lecturer in Artificial Intelligence & Machine Learning",
+	  "description": "Australia-based AI/ML researcher and lecturer specializing in NLP and deep learning",
 	  "alumniOf": {
 		"@type": "EducationalOrganization",
 		"name": "University of Wollongong",
@@ -355,6 +356,12 @@
 	}
 
 	</style>
+	<!-- Add before </head> -->
+	<style>
+	/* Above-the-fold styles */
+	#ael-logo, #mySidebar, .w3-main { display:block !important; }
+	</style>
+	<link rel="stylesheet" href="w3.css" media="print" onload="this.media='all'">
 	</head>
 	<!-- Google tag (gtag.js) -->
 		<script 
@@ -368,17 +375,20 @@
 		  gtag('config', 'G-0959ENK2F2');
 		</script>
 	<script 
-			defer src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8335360976249671"
+			async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8335360976249671"
 			 crossorigin="anonymous">
 	</script>
 		
 	<body class="w3-content" style="margin:0;max-width:100%">
 
 	  <!-- Fixed top‑right logo -->
-	  <a href="https://analyticsedgelearning.github.io/"><img id="ael-logo"
-		   src="images/logo3_2.webp"
-		   alt="Analytics Edge Learning logo"></a>
-
+	  <picture>
+	  <source srcset="images/logo3_2.webp" type="image/webp">
+	  <source srcset="images/logo3_2.png" type="image/png"> 
+	  <img src="images/logo3_2.png" alt="Analytics Edge Learning" loading="lazy">
+	</picture>
+	  
+	 
 	<amp-auto-ads type="adsense"
 			data-ad-client="ca-pub-8335360976249671">
 	</amp-auto-ads>
@@ -393,7 +403,7 @@
 	<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
 
 	<!-- Sidebar/menu -->
-	<nav class="w3-sidebar w3-bar-block w3-blue-grey w3-collapse w3-top w3-right" style="z-index:3;width:150px" id="mySidebar" role="navigation">
+	<nav class="w3-sidebar w3-bar-block w3-blue-grey w3-collapse w3-top w3-right" style="z-index:3;width:150px" id="mySidebar" aria-label="Main navigation menu" role="navigation">
 	  <div class="w3-container w3-display-container w3-padding-16">
 		<h3><b>Saugata Bose, PhD</b></h3>
 		<!--<h6>Lecturer at CIM | AI/ML Researcher | Python Developer</h6>-->
@@ -421,10 +431,12 @@
 
 	<!-- The Home Section -->
 		<div class="w3-container w3-center w3-padding-32" id="home">
-		<img loading="eager" 
-		 style="width:100%;max-width:600px"
-		 alt="Dr. Saugata Bose profile photo"
-		 src="images/sb.webp">
+		<picture>
+	  <source srcset="images/sb.webp" type="image/webp">
+	  <source srcset="images/sb.jpg" type="image/jpeg">
+	  <img src="images/sb.jpg" alt="Dr. Saugata Bose" 
+		   width="600" height="400" loading="eager">
+		</picture>
 		  <!--<img style="width: 100%;max-width: 600px" alt="profile photo" src="images/sb.jpg" alt="Dr. Saugata Bose, AI/ML Researcher and Lecturer"> 
 		  -->
 		  <header>
@@ -506,17 +518,24 @@
 		</div>
 	</div>
 	<!-- The News Section -->
-	  <div class="w3-container w3-padding-32" id="researchproject">
-	   <h2>Research Highlights</h2>
+	  <div class="w3-container w3-padding-32" id="researchproject" role="region" aria-labelledby="research-heading">
+	   <h2 id="research-heading">Research Highlights</h2>
 		<div class="projects-grid">
       <!-- Project 1: Deep One-Class Hate Speech Detection -->
       <div class="project-card">
-	  <img loading="lazy" 
-		 style="width:90%;max-width:650px"
-		 alt="Deep One-Class Fine-Tuning architecture (Transfer Learning + One-Class SVM-based loss) by Dr Saugata Bose."
-		 src="images/image1.webp"
-		 width="650"
-		 height="400">
+		 
+		 <picture>
+		  <!-- WebP first (modern browsers) -->
+		  <source srcset="images/image1.webp" type="image/webp">		  
+		  <!-- Original format fallback -->
+		  <source srcset="images/image1.jpg" type="image/jpeg">		  
+		  <!-- Final fallback for ancient browsers -->
+		  <img src="images/image1.jpg" 
+			   alt="Deep One-Class Fine-Tuning architecture (Transfer Learning + One-Class SVM-based loss) by Dr Saugata Bose."
+			   loading="lazy"
+			   width="650"
+			   height="400">
+		</picture>
 		<!--<img style="width: 90%;max-width: 650px" alt="Deep One-Class Fine-Tuning architecture (Transfer Learning + One-Class SVM-based loss) by Dr Saugata Bose." src="images/image1.jpg"> 
         -->
 		<h3>Problem: Imbalanced short-text classification(<a style="color: #003366; text-decoration: underline;" href="https://link.springer.com/chapter/10.1007/978-3-031-46661-8_23">ADMA 2023</a>)</h3>
@@ -530,12 +549,19 @@
          <p><strong>LexiFusedNet</strong> and its enhanced version <strong>LexiFuse+</strong> are unified models tackling short-text classification on imbalanced data by fusing lexical knowledge with deep learning. These models leverage a hate speech lexicon (HateBase) to weight input features, combined with BERT transfer learning and one-class classification. <strong>LexiFuse+</strong> introduces semi-supervised training using unlabeled data and a custom one-class loss function for fine-tuning.
         <br><br>
         This novel integration of lexicon-based features and one-class transfer learning achieved state-of-the-art results in hate speech detection, with LexiFuse+ yielding high macro-F1 scores (e.g., <strong>0.88</strong> on Davidson and Stormfront datasets) – a <strong>2–6%</strong> improvement over models without lexicon fusion. These projects demonstrate how linguistic domain knowledge (lexicons) can be combined with deep networks to improve detection of toxic content under extreme class imbalance.</p>
-		<img loading="lazy" 
-		 style="width:100%;max-width:650px"
-		 alt="Deep One-Class Hate Speech Detection Model Diagram by Dr Saugata Bose"
-		 src="images/image2.webp"
-		 width="650"
-		 height="400">
+		
+		<picture>
+		  <!-- WebP first (modern browsers) -->
+		  <source srcset="images/image2.webp" type="image/webp">		  
+		  <!-- Original format fallback -->
+		  <source srcset="images/image2.jpg" type="image/jpeg">		  
+		  <!-- Final fallback for ancient browsers -->
+		  <img src="images/image2.jpg" 
+			   alt="Deep One-Class Hate Speech Detection Model Diagram by Dr Saugata Bose."
+			   loading="lazy"
+			   width="650"
+			   height="400">
+		</picture>
 		
 		<!--<img style="width: 100%;max-width: 650px" alt="Deep One-Class Hate Speech Detection Model Diagram by Dr Saugata Bose" src="images/image2.jpg"> 
 		-->
@@ -775,6 +801,19 @@
 		});
 
 	</script>
+	<script>
+	// Image format monitoring
+	const webpSupport = document.createElement('canvas')
+	  .toDataURL('image/webp')
+	  .indexOf('data:image/webp') === 0;
 
+	window.__IMAGE_STATS__ = {
+	  webpSupported: webpSupport,
+	  legacyImages: document.querySelectorAll('source[type="image/jpeg"], source[type="image/png"]').length
+	};
+
+	console.log('WebP Support:', webpSupport);
+	console.log('Legacy Images Served:', window.__IMAGE_STATS__.legacyImages);
+	</script>
 	</body>
 	</html>
