@@ -86,6 +86,41 @@
     /* SIDEBAR visibility: desktop fixed, mobile toggled */
     @media(min-width:768px){#mySidebar{display:block!important}}
     @media(max-width:767px){.w3-main{margin-left:0!important;padding:0 10px}}
+	/* ---------- Mobile fix: stack the 3 info panels ---------- */
+	@media (max-width: 768px) {
+
+	  /* put the three panels under one another */
+	  .w3-row {
+		display: block;                /* cancel flex-nowrap behaviour   */
+	  }
+
+	  /* each panel now stretches full width */
+	  .section-box,
+	  .education-box,
+	  .expertise-box {
+		width: 100% !important;        /* no fixed 360 px                */
+		max-width: 100%;
+		margin: 12px 0;                /* little gap between panels      */
+		height: auto !important;       /* remove the 400 px fixed height */
+		overflow: visible;             /* kill inner scroll bar          */
+	  }
+
+	  /* keep the oval only on desktop – square-off on mobile     */
+	  .expertise-box {
+		border-radius: 12px;           /* gentle rounded rectangle       */
+		padding: 18px;
+	  }
+
+	  /* main content should not be pushed right by 160 px sidebar */
+	  .w3-main {
+		margin-left: 0 !important;
+		padding: 0 12px;
+	  }
+
+	  /* hide the desktop sidebar, show hamburger */
+	  #mySidebar { display: none; }
+	}
+
   </style>
 </head>
 <body class="w3-content" style="margin:0;max-width:100%">
