@@ -1,129 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Basic meta -->
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-  <meta name="robots" content="index,follow" />
-  <meta name="description" content="Dr. Saugata Bose – AI/ML Researcher, Lecturer (UOW PhD) & Founder of Analytics Edge Learning." />
-  <meta name="keywords" content="Saugata Bose, AI Researcher Australia, Machine Learning, NLP, University of Wollongong PhD, Lecturer, Analytics Edge Learning, Deep Learning, Big‑Data, PyTorch, TensorFlow" />
-  <meta name="author" content="Saugata Bose" />
-  <link rel="canonical" href="https://saugatabose28.github.io/" />
+  <meta charset="UTF-8">
+  <title>Dr. Saugata Bose | AI/ML Researcher, Lecturer &amp; AEL Founder</title>
 
-  <!-- Title & Favicon -->
-  <title>Dr Saugata Bose | AI/ML Researcher • Lecturer • Founder AEL</title>
-  <link rel="icon" type="image/png" href="images/icons.png" />
+  <!-- Canonical & SEO -->
+  <link rel="canonical" href="https://saugatabose28.github.io/">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <meta name="robots" content="index, follow">
+  <meta name="description" content="Dr. Saugata Bose – AI/ML researcher and lecturer in Australia, founder of Analytics Edge Learning.">
+  <meta name="keywords" content="Saugata Bose, AI Researcher Australia, Machine Learning NLP, Lecturer, Analytics Edge Learning">
 
-  <!-- Structured data (JSON‑LD) -->
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"Person",
-    "name":"Saugata Bose",
-    "url":"https://saugatabose28.github.io/",
-    "image":"https://saugatabose28.github.io/images/sb.jpg",
-    "jobTitle":"Lecturer in Artificial Intelligence & Machine Learning",
-    "description":"Australia‑based AI/ML researcher and lecturer specialising in NLP & deep learning",
-    "alumniOf":{"@type":"EducationalOrganization","name":"University of Wollongong","sameAs":"https://www.uow.edu.au/"},
-    "affiliation":[
-      {"@type":"Organization","name":"Canterbury Institute of Management","url":"https://www.ciom.edu.au/"},
-      {"@type":"Organization","name":"Analytics Edge Learning","url":"https://analyticsedgelearning.github.io/"}
-    ],
-    "sameAs":[
-      "https://www.linkedin.com/in/saugata28",
-      "https://github.com/saugatabose28",
-      "https://scholar.google.com/citations?user=n9cZu0IAAAAJ"
-    ]
-  }
-  </script>
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="images/icons.png">
 
-  <!-- Single copy of w3.css (deferred) -->
-  <link rel="stylesheet" href="w3.css" media="print" onload="this.media='all'" />
+  <!-- AMP ads & GTM (unchanged) -->
+  <script async custom-element="amp-auto-ads" src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js"></script>
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});
+  var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;
+  j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-MLHSGC7T');</script>
 
-  <!-- Custom CSS (mobile‑first) -->
+  <!-- Base CSS (mobile-first) -->
+  <link rel="stylesheet" href="w3.css">
   <style>
-    *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
-    body{font-family:Roboto,Arial,sans-serif;line-height:1.6;max-width:100%;margin:0}
-    .w3-main{margin-left:160px;padding:0 10px}
+  *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+  body{font-family:Roboto,Arial,sans-serif;line-height:1.6;padding:15px}
 
-    /* ------------  SIDEBAR  ------------- */
-    #mySidebar{z-index:3;width:150px}
+  /* --- MOBILE LAYOUT --- */
+  #ael-logo{position:fixed;top:8px;right:8px;width:110px;height:auto;z-index:999}
+  header h1{font-size:1.8rem;color:#2d5f7d}
+  header h2{font-size:1.1rem;color:#607d8b;font-weight:400}
+  .section{margin:2rem 0}
+  .section h3{color:#2d5f7d;border-bottom:2px solid #4a90e2;padding-bottom:.5rem}
+  .exp-grid{column-count:1;margin-top:10px}
+  .exp-card{break-inside:avoid;background:#fafafa;border:1px solid #ddd;border-radius:6px;margin-bottom:20px;padding:18px 22px}
+  .project-card img{max-width:100%;height:auto;border:1px solid #ccc;border-radius:3px}
+  .w3-sidebar{display:none}           /* collapsed on mobile */
+  .w3-main{margin-left:0;padding:0 10px}
+  .section-box{background:#f5f5f5;border:1px solid #e0e0e0;padding:15px;margin:10px 0}
+  .w3-justify{word-break:break-word;hyphens:auto;overflow-wrap:anywhere}
 
-    /* Logo top‑right */
-    #ael-logo{position:fixed;top:8px;right:8px;width:190px;height:auto;z-index:9999;transition:opacity .2s}
-    #ael-logo:hover{opacity:.85}
-    @media(max-width:600px){#ael-logo{width:110px;top:6px;right:6px}}
-
-    /* Section boxes */
-    .section-box{background:#f5f5f5;border:1px solid #e0e0e0;padding:15px;margin:5px;overflow-y:auto}
-
-    /* Masonry experience grid */
-    .exp-grid{column-gap:20px;column-count:1;margin-top:10px}
-    @media(min-width:768px){.exp-grid{column-count:2}}
-    @media(min-width:1200px){.exp-grid{column-count:3}}
-    .exp-card{break-inside:avoid;margin-bottom:20px;background:#fafafa;border:1px solid #ddd;border-radius:6px;padding:18px 22px}
-
-    /* ----------  MOBILE OVERRIDES  ---------- */
-    @media(max-width:767px){
-      .w3-main{margin-left:0!important}
-      #mySidebar{display:none}
-      .w3-row{flex-direction:column;overflow-x:visible}
-      .section-box{width:100%;height:auto;margin:10px 0}
-    }
+  /* --- DESKTOP OVERRIDES --- */
+  @media (min-width:992px){
+    /* show sidebar permanently */
+    #mySidebar{display:block !important;position:fixed;left:0;top:0;width:150px;height:100vh;overflow:auto}
+    .w3-main{margin-left:160px !important;padding-left:10px;padding-right:10px}
+    #ael-logo{width:190px}
+    .exp-grid{column-count:3}
+    .w3-sidebar a{font-size:18px}
+  }
   </style>
 </head>
 
-<body class="w3-content">
-  <!-- Fixed logo -->
-  <a href="https://analyticsedgelearning.github.io/"><img id="ael-logo" src="images/logo3_2.png" alt="Analytics Edge Learning logo" /></a>
+<body class="w3-content" style="margin:0;max-width:100%">
+<!-- GTM noscript -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MLHSGC7T"height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
-  <!-- Sidebar -->
-  <nav id="mySidebar" class="w3-sidebar w3-bar-block w3-blue-grey w3-collapse w3-top w3-right" role="navigation">
-    <div class="w3-container w3-padding-16"><h3><b>Saugata Bose, PhD</b></h3></div>
-    <div class="w3-padding-64 w3-text-light-grey w3-large" style="font-weight:bold">
-      <a class="w3-bar-item w3-button" href="#home" onclick="w3_close()">Home</a>
-      <a class="w3-bar-item w3-button" href="#research" onclick="w3_close()">Research</a>
-      <a class="w3-bar-item w3-button" href="#projects" onclick="w3_close()">Projects</a>
-      <a class="w3-bar-item w3-button" href="#awards" onclick="w3_close()">Awards</a>
-      <a class="w3-bar-item w3-button" href="#experience" onclick="w3_close()">Experience</a>
-    </div>
-  </nav>
+<!-- Fixed top-right logo -->
+<a href="https://analyticsedgelearning.github.io/"><img id="ael-logo" src="images/logo3_2.png" alt="Analytics Edge Learning logo"></a>
 
-  <!-- Mobile top bar -->
-  <header class="w3-bar w3-top w3-hide-large w3-blue-grey w3-large">
-    <span class="w3-bar-item w3-padding-24">Saugata Bose, PhD</span>
-    <button class="w3-bar-item w3-button w3-padding-24 w3-right" aria-label="Open menu" onclick="w3_open()">≡</button>
-  </header>
+<!-- Sidebar -->
+<nav id="mySidebar" class="w3-sidebar w3-bar-block w3-blue-grey" style="z-index:3;width:150px">
+  <div class="w3-container w3-padding-16">
+    <h3><b>Saugata<br>Bose, PhD</b></h3>
+  </div>
+  <div class="w3-padding-64 w3-text-light-grey w3-large" style="font-weight:bold">
+    <a href="#home"          class="w3-bar-item w3-button">Home</a>
+    <a href="#research"      class="w3-bar-item w3-button">Research</a>
+    <a href="#projects"      class="w3-bar-item w3-button">Projects</a>
+    <a href="#awards"        class="w3-bar-item w3-button">Awards</a>
+    <a href="#experience"    class="w3-bar-item w3-button">Experience</a>
+  </div>
+</nav>
 
-  <!-- Overlay (small screens) -->
-  <div id="myOverlay" class="w3-overlay w3-hide-large" onclick="w3_close()" title="close menu"></div>
+<!-- Mobile top bar -->
+<header class="w3-bar w3-top w3-hide-large w3-blue-grey">
+  <div class="w3-bar-item w3-padding-24">Saugata Bose, PhD</div>
+  <a class="w3-bar-item w3-button w3-padding-24 w3-right" onclick="document.getElementById('mySidebar').style.display='block'"><b>≡</b></a>
+</header>
 
-  <!-- MAIN CONTENT -->
-  <main class="w3-main" id="home" role="main">
-    <div class="w3-hide-large" style="margin-top:83px"></div>
+<!-- Page content -->
+<div class="w3-main" id="home">
 
-    <!-- Hero -->
-    <div class="w3-container w3-center w3-padding-32">
-      <picture>
-        <source srcset="images/sb.webp" type="image/webp" />
-        <img src="images/sb.jpg" alt="Dr. Saugata Bose" style="width:100%;max-width:600px" />
-      </picture>
-      <h1>Saugata Bose</h1>
-      <p>Lecturer&nbsp;|&nbsp;AI/ML Researcher&nbsp;|&nbsp;Python Developer</p>
-      <p class="w3-justify" style="max-width:850px;margin:auto">
-        I’m a <strong>PhD‑trained AI researcher, lecturer, and founder</strong> who translates cutting‑edge ideas into production systems. My doctorate at the <em>University&nbsp;of&nbsp;Wollongong</em> (with <u>Dr Guoxin Su</u> &amp; <u>Prof Minjie Zhang</u>) explored <strong>short‑text classification</strong>, <strong>one‑class anomaly detection</strong>, and <strong>representation learning</strong> with deep‑transfer methods.<br /><br />
-        Today I teach a wide range of <strong>computer‑science courses</strong>—from ML &amp; NLP to big‑data engineering and cloud computing—while running <a href="https://analyticsedgelearning.github.io/">Analytics Edge Learning</a>, where I build ML solutions using PyTorch, TensorFlow, Hugging Face, AWS and Azure. Whether mentoring students or deploying cloud‑native models, I focus on <strong>robust, explainable, and scalable AI</strong> that delivers real‑world impact.
-      </p>
-      <p>
-        <a href="https://www.linkedin.com/in/saugata28/">LinkedIn</a> •
-        <a href="https://scholar.google.com/citations?user=n9cZu0IAAAAJ">Google Scholar</a> •
-        <a href="https://github.com/saugatabose28">GitHub</a>
-      </p>
-    </div>
+  <!-- profile -->
+  <div class="w3-container w3-center w3-padding-32">
+    <picture>
+      <source srcset="images/sb.webp" type="image/webp">
+      <img src="images/sb.jpg" alt="Dr. Saugata Bose" style="width:100%;max-width:600px" loading="eager">
+    </picture>
+    <header>
+      <h1>Saugata Bose</h1>
+      <h2>Lecturer&nbsp;| AI/ML Researcher&nbsp;| Python Developer</h2>
+    </header><br>
 
-    <!-- Sections omitted for brevity … your News / Research / Projects / Awards / Experience blocks go here unchanged -->
-			<div class="w3-container w3-third section-box">
+    <p class="w3-justify" style="max-width:850px;margin:auto">
+      I’m a <strong>PhD-trained AI researcher, lecturer, and founder</strong> who turns cutting-edge ideas into production-ready systems. My doctorate at the <em>University of Wollongong</em> explored <strong>short-text classification, one-class anomaly detection, and representation learning</strong>. I now teach a wide range of computer-science courses and lead <a href="https://analyticsedgelearning.github.io/"><strong>Analytics Edge Learning</strong></a>, building ML solutions with Python, PyTorch, TensorFlow and cloud platforms.
+    </p><br>
+
+    <p>
+      <a href="https://www.linkedin.com/in/saugata28/">LinkedIn</a> &nbsp;|&nbsp;
+      <a href="https://scholar.google.com/citations?user=n9cZu0IAAAAJ">Google&nbsp;Scholar</a> &nbsp;|&nbsp;
+      <a href="https://github.com/saugatabose28">GitHub</a>
+    </p>
+  </div>
+	 <!-- The News Section -->
+	<div class="w3-row" style="display: flex; flex-wrap: nowrap; justify-content: space-between; gap: 10px;">
+		<div class="w3-container w3-third section-box">
 			<h2>News</h2>
 			<ul class="news-list">
 			  <li class="highlight">03/2025, Appointed as a full-time Lecturer at Canterbury Institute of Management (CIM), Australia.</li>
@@ -174,19 +156,74 @@
 				<strong>Security Tools:</strong> Python cryptography, regex-based log analyzers, Cryptography, Hashing (SHA256, MD5)
 			</div>
 		</div>
-  </main>
+	</div>
+  <!-- === Research section === -->
+  <section id="research" class="section">
+    <h3>Research Highlights</h3>
+    <div class="projects-grid">
+      <div class="project-card">
+        <picture>
+          <source srcset="images/image1.webp" type="image/webp">
+          <img src="images/image1.jpg" alt="DOCFT architecture" loading="lazy" width="650" height="400">
+        </picture>
+        <h4>Deep One-Class Fine-Tuning&nbsp;(ADMA 2023)</h4>
+        <p>Two-stage transfer-learning framework for imbalanced short-text classification using BERT + OC-SVM loss.</p>
+      </div>
 
-  <!-- Footer -->
-  <footer class="w3-container w3-center w3-padding-32">
-    <hr />
-    <p><strong>Dr. Saugata Bose</strong><br />Lecturer, Canterbury Institute of Management | Founder, Analytics Edge Learning<br /><em>saugata.bose@ciom.edu.au</em></p>
+      <div class="project-card">
+        <h4>LexiFusedNet&nbsp;/&nbsp;LexiFuse+ (PKAW 2023)</h4>
+        <p>Fuse domain lexicons with BERT and one-class learning for robust hate-speech detection on skewed data.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- === Projects section === -->
+  <section id="projects" class="section">
+    <h3>Technical Project Highlights</h3>
+    <div class="projects-grid">
+      <div class="project-card"><h4>Big-Data COVID-19 Analysis</h4><p>PySpark MLlib on large epidemiological datasets.</p></div>
+      <div class="project-card"><h4>Customer-Churn Prediction</h4><p>pandas + XGBoost with SHAP explainability.</p></div>
+      <div class="project-card"><h4>Security Log Analysis</h4><p>Regex parsing &amp; cryptography in Python.</p></div>
+    </div>
+  </section>
+
+  <!-- === Awards & Experience combined (shortened for brevity) === -->
+  <section id="awards" class="section">
+    <h3>Awards</h3>
+    <ul>
+      <li>IPTA Scholarship, UOW (2018-23)</li>
+      <li>University Postgraduate Award, UOW (2018-22)</li>
+    </ul>
+  </section>
+
+  <section id="experience" class="section">
+    <h3>Professional Experience</h3>
+    <div class="exp-grid">
+      <div class="exp-card">
+        <h4>Lecturer – CIM (2025-)</h4>
+        <ul><li>Lead MBIS/MSIT units; integrate AWS SageMaker labs.</li></ul>
+      </div>
+      <div class="exp-card">
+        <h4>Founder – Analytics Edge Learning&nbsp;(2023-)</h4>
+        <ul><li>Built sentiment &amp; churn pipelines on AWS/Spark.</li></ul>
+      </div>
+    </div>
+  </section>
+
+  <footer class="w3-center" style="margin:40px 0 10px">
+    <hr>
+    <strong>Dr. Saugata Bose</strong> – Lecturer @ CIM | Founder, Analytics Edge Learning<br>
+    <em>saugata.bose@ciom.edu.au</em>
   </footer>
+</div><!-- /w3-main -->
 
-  <!-- ----------  JS  ---------- -->
-  <script>
-    // Sidebar helpers
-    function w3_open(){document.getElementById('mySidebar').style.display='block';document.getElementById('myOverlay').style.display='block'}
-    function w3_close(){document.getElementById('mySidebar').style.display='none';document.getElementById('myOverlay').style.display='none'}
-  </script>
+<!-- Optional: simple JS to hide sidebar on mobile after click -->
+<script>
+document.querySelectorAll('#mySidebar a').forEach(function(el){
+  el.addEventListener('click',function(){
+    if(window.innerWidth<992){document.getElementById('mySidebar').style.display='none';}
+  });
+});
+</script>
 </body>
 </html>
