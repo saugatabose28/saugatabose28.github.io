@@ -84,7 +84,20 @@ header p{margin:2px 0 0;font-size:1.1em;color:#666}
 
 /* ===============  W3-ROW – prevent sideways scrolling  =============== */
 .w3-row{max-width:100%;overflow-x:auto}
-.w3-justify{word-break:break-word;hyphens:auto;overflow-wrap:anywhere}
+.w3-justify {
+  text-align: justify;
+  hyphens: auto;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+/* Override on small screens for better spacing */
+@media (max-width: 767px) {
+  .w3-justify {
+    text-align: left !important;
+  }
+}
+
 
 /* ===============  FOOTER  =============== */
 footer{background:#f4f4f4;padding:10px;text-align:center;position:sticky;bottom:0;width:100%}
