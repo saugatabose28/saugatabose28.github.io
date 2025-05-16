@@ -14,11 +14,6 @@
   <style>
     *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
     body{font-family:Roboto,Arial,Helvetica,sans-serif;line-height:1.6;margin:0;padding:15px}
-	/* ----- call-out highlight (News) ----- */
-	.highlight {
-	  background: #fffab7;     /* pale yellow */
-	  font-weight: 600;        /* slightly bolder text */
-	}
 
     /* ----------  GENERAL  ---------- */
     .projects-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
@@ -77,6 +72,27 @@
     #ael-logo{position:fixed;top:8px;right:8px;width:190px;height:auto;z-index:9999;transition:opacity .2s ease}
     #ael-logo:hover{opacity:.85}
     @media(max-width:600px){#ael-logo{width:110px;top:6px;right:6px}}
+	/* =======================================
+   Flashing highlight for “News” call-outs
+   =======================================*/
+	@keyframes flashHighlight {
+	  from { background-color: #fff99b; }   /* bright yellow */
+	  to   { background-color: transparent; }
+	}
+
+	.highlight {
+	  animation: flashHighlight 1s infinite alternate;
+	  background-color: #fff99b;   /* starting colour for users who disable animations */
+	  font-weight: 600;
+	}
+
+	/* Respect users who prefer reduced motion */
+	@media (prefers-reduced-motion: reduce) {
+	  .highlight {
+		animation: none;
+	  }
+	}
+
   </style>
 </head>
 <body class="w3-content" style="max-width:100%">
