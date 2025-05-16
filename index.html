@@ -122,6 +122,40 @@
 	}
 
   </style>
+  <style>
+	/* ----- MOBILE LAYOUT  ( ≤ 768 px )  ------------------------------ */
+	@media (max-width: 768px) {
+
+	  /* stack the row vertically */
+	  .w3-row {
+		display: block !important;      /* cancel flex / column-layout   */
+	  }
+
+	  /* every card now stretches 100 % width and auto-height            */
+	  .section-box,
+	  .education-box,
+	  .expertise-box {
+		width: 100%      !important;
+		max-width: 100%  !important;
+		height: auto     !important;    /* remove fixed 400 px           */
+		overflow: visible !important;   /* kill the inner scroll bar     */
+		margin: 14px 0;                 /* little gap between cards      */
+	  }
+
+	  /* make the expertise card a regular rounded rectangle on phones   */
+	  .expertise-box {
+		border-radius: 12px;            /* instead of the desktop circle */
+		padding: 20px;
+	  }
+
+	  /* the desktop sidebar pushes .w3-main right by 160 px — cancel it */
+	  .w3-main   { margin-left: 0 !important; }
+
+	  /* hide sidebar, show only the hamburger */
+	  #mySidebar { display: none !important; }
+	}
+	</style>
+
 </head>
 <body class="w3-content" style="margin:0;max-width:100%">
   <!-- Google Tag (noscript) -->
