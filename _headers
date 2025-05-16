@@ -1,13 +1,8 @@
-<IfModule mod_headers.c>
-  # ---- Content Security Policy ----
-  Header set Content-Security-Policy "
-    default-src 'self';
-    script-src   'self' https://www.googletagmanager.com https://www.google-analytics.com 'unsafe-inline' 'unsafe-eval';
-    style-src    'self' 'unsafe-inline' https:;
-    img-src      'self' data: https:;
-    frame-src    https://www.youtube.com https://*.google.com;
-    connect-src  'self' https://www.google-analytics.com;"
-  
-  # Prevent MIME-type sniffing
-  Header set X-Content-Type-Options "nosniff"
-</IfModule>
+/*
+  Content-Security-Policy: default-src 'self';
+    script-src 'self' https://www.googletagmanager.com https://www.google-analytics.com 'unsafe-inline' 'unsafe-eval';
+    style-src 'self' 'unsafe-inline' https:;
+    img-src 'self' data: https:;
+    frame-src https://www.youtube.com https://*.google.com;
+    connect-src 'self' https://www.google-analytics.com;
+  X-Content-Type-Options: nosniff
