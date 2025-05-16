@@ -233,6 +233,57 @@ hr{margin:0;border:1px solid #ccc}
     </div><!-- /w3-row -->
 
     <!-- other sections (Research, Projects, Awards, Experience) would follow exactly as in your previous version -->
+		<!-- The News Section -->
+	<div class="w3-container w3-padding-32" id="researchproject" role="region" aria-labelledby="research-heading">
+	<h2 id="research-heading">Research Highlights</h2>
+	<div class="projects-grid">
+      <!-- Project 1: Deep One-Class Hate Speech Detection -->
+      <div class="project-card">
+		 
+		 <picture>
+		  <!-- WebP first (modern browsers) -->
+		  <source srcset="images/image1.webp" type="image/webp">		  
+		  <!-- Original format fallback -->
+		  <source srcset="images/image1.jpg" type="image/jpeg">		  
+		  <!-- Final fallback for ancient browsers -->
+		  <img src="images/image1.jpg" 
+			   alt="Deep One-Class Fine-Tuning architecture (Transfer Learning + One-Class SVM-based loss) by Dr Saugata Bose."
+			   loading="lazy"
+			   width="650"
+			   height="400">
+		</picture>
+		<!--<img style="width: 90%;max-width: 650px" alt="Deep One-Class Fine-Tuning architecture (Transfer Learning + One-Class SVM-based loss) by Dr Saugata Bose." src="images/image1.jpg"> 
+        -->
+		<h3>Problem: Imbalanced short-text classification(<a style="color: #003366; text-decoration: underline;" href="https://link.springer.com/chapter/10.1007/978-3-031-46661-8_23">ADMA 2023</a>)</h3>
+        <p>This project introduces <strong>DOCFT</strong> (Deep One-Class Fine-Tuning), a two-stage transfer learning framework tailored for short-text classification on <em>imbalanced datasets</em>. It employs a <strong>BERT encoder</strong> fine-tuned using a novel <strong>OC-SVM loss function</strong> combined with <strong>quantile regression</strong>. The model is trained in two alternating phases: one that adapts pre-trained features to anomaly-like samples, and another that optimizes the decision boundary using one-class principles.
+        <br><br>
+        Evaluated on four benchmark hate speech datasets (e.g., <em><a style="color: #003366; text-decoration: underline;" href="https://aclanthology.org/S19-2007/">Stormfront</a></em>, <em><a style="color: #003366; text-decoration: underline;" href="https://hasocfire.github.io/hasoc/2019/dataset.html">HASOC-2019</a></em>, <em><a style="color: #003366; text-decoration: underline;" href="https://arxiv.org/abs/1703.04009">Davidson</a></em>), DOCFT outperformed conventional binary classifiers by up to <strong>9%</strong> in macro-F1 and demonstrated robust generalization across datasets. This project shows how <strong>transfer learning</strong> can be adapted for anomaly detection using one-class assumptions, even under severe data imbalance.</p>
+      </div>
+      <!-- Project 2: LexiFusedNet & LexiFuse+ -->
+      <div class="project-card">
+        <h3>LexiFusedNet &amp; LexiFuse+ (Lexicon-Fused One-Class Models) (<a style="color: #003366; text-decoration: underline;" href="https://link.springer.com/chapter/10.1007/978-981-99-7855-7_6">PKAW 2023</a>)</h3>
+         <p><strong>LexiFusedNet</strong> and its enhanced version <strong>LexiFuse+</strong> are unified models tackling short-text classification on imbalanced data by fusing lexical knowledge with deep learning. These models leverage a hate speech lexicon (HateBase) to weight input features, combined with BERT transfer learning and one-class classification. <strong>LexiFuse+</strong> introduces semi-supervised training using unlabeled data and a custom one-class loss function for fine-tuning.
+        <br><br>
+        This novel integration of lexicon-based features and one-class transfer learning achieved state-of-the-art results in hate speech detection, with LexiFuse+ yielding high macro-F1 scores (e.g., <strong>0.88</strong> on Davidson and Stormfront datasets) – a <strong>2–6%</strong> improvement over models without lexicon fusion. These projects demonstrate how linguistic domain knowledge (lexicons) can be combined with deep networks to improve detection of toxic content under extreme class imbalance.</p>
+		
+		<picture>
+		  <!-- WebP first (modern browsers) -->
+		  <source srcset="images/image2.webp" type="image/webp">		  
+		  <!-- Original format fallback -->
+		  <source srcset="images/image2.jpg" type="image/jpeg">		  
+		  <!-- Final fallback for ancient browsers -->
+		  <img src="images/image2.jpg" 
+			   alt="Deep One-Class Hate Speech Detection Model Diagram by Dr Saugata Bose."
+			   loading="lazy"
+			   width="650"
+			   height="400">
+		</picture>
+		
+		<!--<img style="width: 100%;max-width: 650px" alt="Deep One-Class Hate Speech Detection Model Diagram by Dr Saugata Bose" src="images/image2.jpg"> 
+		-->
+	  </div>
+    </div>
+	</div>
 
   </div><!-- /w3-main -->
 
