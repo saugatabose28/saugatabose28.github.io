@@ -140,7 +140,6 @@ header p{margin:2px 0 0;font-size:1.1em;color:#666}
   }
 }
 
-
 /* ===============  FOOTER  =============== */
 footer{background:#f4f4f4;padding:10px;text-align:center;position:sticky;bottom:0;width:100%}
 hr{margin:0;border:1px solid #ccc}
@@ -178,6 +177,25 @@ hr{margin:0;border:1px solid #ccc}
 /* ---------------------------------------------------------
      END MOBILE IMPROVEMENTS
 ---------------------------------------------------------*/
+/* === Desktop-only tweak: reduce blank gap between Education & Expertise === */
+@media (min-width: 768px){           /* desktop / tablet width */
+
+  /* 1. Make the three columns align to the top edge */
+  .w3-row{align-items:flex-start;}   /* overrides default stretch */
+
+  /* 2. Shrink the Technical-Expertise oval a little */
+  .expertise-box{
+    height:300px;                    /* was 360px  — adjust to taste  */
+  }
+
+  /* 3. Remove stray bottom space under the education block */
+  .education-content{margin-bottom:0;}
+
+  /* (optional) you can also trim the inside padding if you want it tighter:
+     .education-content{padding:12px;}
+  */
+}
+
 </style>
 
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-0959ENK2F2"></script>
