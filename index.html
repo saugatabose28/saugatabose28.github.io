@@ -177,6 +177,23 @@ hr{margin:0;border:1px solid #ccc}
 /* ---------------------------------------------------------
      END MOBILE IMPROVEMENTS
 ---------------------------------------------------------*/
+/* 📐 Desktop layout tidy-up */
+@media (min-width:768px){
+
+  /* 1️⃣ put the three columns close together with a fixed gap */
+  .w3-row{
+        justify-content:center;   /* instead of space-between   */
+        column-gap:24px;          /* exact space between cols   */
+  }
+
+  /* 2️⃣ let each .w3-container shrink-wrap to its content       */
+  .w3-row > .w3-container{
+        flex:0 0 auto;           /* forget the 33 % W3.CSS rule */
+  }
+
+  /* 3️⃣ (optional) nudge the oval a little smaller */
+  .expertise-box{width:340px;height:340px}
+}
 
 </style>
 
